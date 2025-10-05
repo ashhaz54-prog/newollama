@@ -1,0 +1,124 @@
+{
+  "schemaVersion": "v2",
+  "id": "case_gi_006",
+  "meta": {
+    "title": "Episode of vomiting blood",
+    "station_type": "history_taking",
+    "time_limit_sec": 900,
+    "candidate_brief": "You are the medical registrar in the emergency department. Take an urgent focused history from this patient who has vomited blood and assess risk factors.",
+    "difficulty": "advanced",
+    "specialty": "gastroenterology",
+    "tags": ["upper-gi-bleed", "hematemesis"],
+    "patient_script": {
+      "opening_statement": "I threw up and it was bright red blood earlier today.",
+      "if_asked": {
+        "symptom_details": "I felt nauseous this morning and when I vomited it was a large splash of bright red blood with some clots.",
+        "timing": "Happened three hours ago after a night of heavy drinking; before that I'd had a week of dark stools.",
+        "after_effects": "Since then I've felt dizzy and weak.",
+        "exacerbating": "When I stand up quickly the dizziness is worse.",
+        "relieving": "Lying flat helps a little.",
+        "associated_symptoms": "I've had black tarry stools this past week and mild upper tummy pain. No chest pain or fainting.",
+        "past_medical_history": "Diagnosed with alcohol-related liver disease two years ago; had a hospital stay for jaundice.",
+        "medications": "Take propranolol that the liver clinic gave me but I sometimes miss doses; also take omeprazole.",
+        "allergies": "Allergic to sulfa antibiotics; they make me swell up.",
+        "family_history": "Dad had cirrhosis from drinking. Mum has hypertension.",
+        "social_history": "I drink about half a bottle of whiskey most nights, smoke 10 cigarettes a day, live alone, and work part-time at a bar. No illicit drugs.",
+        "functional_status": "I've been missing shifts recently because I'm wiped out."
+      },
+      "collateral": {
+        "observer_note": "Friend who brought him says he has been drinking heavily and looked pale for days."
+      },
+      "emotional_tone": "Pale, anxious, slightly tremulous",
+      "do_not_volunteer": [
+        "Do not reveal diagnosis",
+        "Do not list investigations/results",
+        "Do not state management plan"
+      ]
+    }
+  },
+  "patient": {
+    "name": "Daniel Hughes",
+    "age": 45,
+    "sex": "Male",
+    "occupation": "Bar staff",
+    "setting": "Emergency department resus bay",
+    "baseline_mood": "Distressed",
+    "baseline_body_language": "Clutching abdomen, restless",
+    "baseline_voice": "Weak, slightly slurred"
+  },
+  "pc": {
+    "symptom": "Hematemesis",
+    "duration": "1 episode 3 hours ago",
+    "one_liner": "I vomited a load of bright red blood a few hours back."
+  },
+  "hpc": {
+    "site": "Upper gastrointestinal tract",
+    "onset": "Sudden episode following nausea",
+    "character": "Large volume bright red blood with clots",
+    "radiation": "None",
+    "associated": ["Melena", "Lightheadedness", "Epigastric discomfort"],
+    "timing": "Single episode today with preceding week of melena",
+    "exacerbating": "Alcohol binges",
+    "relieving": "None effective",
+    "severity_1_to_10": 8,
+    "relevant_negatives": ["No hematochezia", "No syncope", "No chest pain"]
+  },
+  "pmh": { "conditions": ["Alcohol-related liver disease"], "deny": ["Peptic ulcer disease formally diagnosed"], "surgeries": [], "hospitalisations": ["Admitted 2 years ago for jaundice"], "trauma": [] },
+  "dh": { "current": ["Propranolol 20mg BD", "Omeprazole 20mg OD"], "recent_changes": "Missed several propranolol doses over past week", "otc": ["Occasional ibuprofen for hangover headaches"], "herbal": [] },
+  "allergies": [ { "substance": "Sulfonamide antibiotics", "reaction": "Angioedema" } ],
+  "fh": { "father": "Cirrhosis", "mother": "Hypertension", "siblings": "Brother with alcohol dependence" },
+  "sh": {
+    "smoking": "10 cigarettes per day",
+    "alcohol": "Approximately 35 units per week, recent binge",
+    "recreational_drugs": "None",
+    "living": "Lives alone",
+    "exercise": "Minimal",
+    "diet": "Irregular meals, mostly bar food",
+    "occupation_detail": "Part-time evening shifts at bar"
+  },
+  "ros": {
+    "general": ["Unintentional 3kg weight loss", "Night sweats"],
+    "cardio": ["No chest pain", "No palpitations"],
+    "resp": ["No breathlessness"],
+    "gi": ["Melena", "No hematochezia"],
+    "neuro": ["No confusion", "No focal weakness"]
+  },
+  "ice": { "ideas": "Thinks his stomach lining burst", "concerns": "Afraid he might bleed to death", "expectations": "Wants urgent help to stop the bleeding and guidance on what happens next" },
+  "examiner_guidance": {
+    "most_likely_diagnosis": "Upper gastrointestinal bleed secondary to esophageal varices",
+    "differentials": ["Bleeding gastric ulcer", "Mallory-Weiss tear", "Severe erosive gastritis"],
+    "immediate_investigations": ["Resuscitation with urgent bloods including FBC, U&E, coagulation", "Group and crossmatch", "Urgent endoscopy", "Liver function tests"]
+  },
+  "marking": {
+    "sections": [
+      { "id": 1, "title": "Introduction & rapport", "max_marks": 8, "weight": 0.1 },
+      { "id": 2, "title": "Presenting complaint & HPC", "max_marks": 24, "weight": 0.35 },
+      { "id": 3, "title": "Background history", "max_marks": 18, "weight": 0.25 },
+      { "id": 4, "title": "Focused examination", "max_marks": 10, "weight": 0.1 },
+      { "id": 5, "title": "Initial investigations & plan", "max_marks": 10, "weight": 0.1 },
+      { "id": 6, "title": "Risk assessment & closure", "max_marks": 6, "weight": 0.05 },
+      { "id": 7, "title": "Communication skills", "max_marks": 4, "weight": 0.05 }
+    ],
+    "total_marks": 80,
+    "pass_mark": 56,
+    "bands": { "Excellent": "70-80", "Good": "60-69", "Borderline": "56-59", "Fail": "<56" }
+  },
+  "disclosure_rules": {
+    "ladder": ["pc_one_line", "hpc_details_if_asked", "background_if_asked"],
+    "never_volunteer_lists": ["associated", "ros"],
+    "deny_vitals": true,
+    "style": { "avg_words_per_turn": [6, 14], "tone": "layperson", "nonverbal_cues": [] }
+  },
+  "rubric_map": {
+    "introduction": ["introduce_self", "confirm_identity", "gain_consent"],
+    "pc": ["nature_of_pain", "duration", "impact_on_function"],
+    "hpc": ["site", "onset", "character", "radiation", "associated", "timing", "exacerbating", "relieving", "severity", "red_flags"],
+    "background": ["pmh", "dh", "allergies", "fh", "sh"],
+    "exam": ["explain_exam", "cardio_exam", "resp_exam", "vitals"],
+    "plan": ["initial_investigations", "initial_management", "risk_discussion"],
+    "ros": ["cardio_screen", "resp_screen", "gi_screen"],
+    "ice": ["ideas", "concerns", "expectations"],
+    "closure": ["summarise", "safety_net", "check_questions"],
+    "communication": ["empathy", "active_listening", "plain_language"]
+  }
+}

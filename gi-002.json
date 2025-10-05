@@ -1,0 +1,124 @@
+{
+  "schemaVersion": "v2",
+  "id": "case_gi_002",
+  "meta": {
+    "title": "Bright red bleeding on toilet paper",
+    "station_type": "history_taking",
+    "time_limit_sec": 900,
+    "candidate_brief": "You are the doctor in the acute surgical assessment unit. Take a targeted history from this patient who has presented with rectal bleeding.",
+    "difficulty": "beginner",
+    "specialty": "gastroenterology",
+    "tags": ["rectal-bleeding", "hemorrhoids"],
+    "patient_script": {
+      "opening_statement": "I keep seeing blood when I wipe after a bowel movement.",
+      "if_asked": {
+        "symptom_details": "It's bright red and shows up on the toilet paper and sometimes drips into the bowl.",
+        "timing": "Started two weeks ago; happens every other day when I strain.",
+        "after_effects": "I feel a bit sore around my back passage afterwards.",
+        "exacerbating": "Straining with hard stools makes it worse.",
+        "relieving": "Warm baths and stool softeners help a bit.",
+        "associated_symptoms": "I have some itching around the back passage but no tummy pain, no weight loss, and no fevers.",
+        "past_medical_history": "I get constipation now and again but nothing else serious.",
+        "medications": "Just the occasional ibuprofen for headaches and I started using over-the-counter stool softeners this week.",
+        "allergies": "No allergies that I know of.",
+        "family_history": "No bowel cancer that I'm aware of. Dad has diabetes.",
+        "social_history": "I smoke about 5 cigarettes a day, have a couple beers on weekends, live alone, and work as a delivery driver.",
+        "functional_status": "It hasn't stopped me working but I'm worried every time I go to the loo now."
+      },
+      "collateral": {
+        "observer_note": "No collateral informant present"
+      },
+      "emotional_tone": "Embarrassed, avoids eye contact initially",
+      "do_not_volunteer": [
+        "Do not reveal diagnosis",
+        "Do not list investigations/results",
+        "Do not state management plan"
+      ]
+    }
+  },
+  "patient": {
+    "name": "Jordan Patel",
+    "age": 29,
+    "sex": "Female",
+    "occupation": "Delivery driver",
+    "setting": "Emergency assessment unit",
+    "baseline_mood": "Anxious",
+    "baseline_body_language": "Fidgeting hands",
+    "baseline_voice": "Quiet and hesitant"
+  },
+  "pc": {
+    "symptom": "Rectal bleeding",
+    "duration": "2 weeks",
+    "one_liner": "There's bright red blood when I wipe after going to the toilet."
+  },
+  "hpc": {
+    "site": "Per rectum",
+    "onset": "Sudden appearance",
+    "character": "Bright red streaks and drips",
+    "radiation": "None",
+    "associated": ["Perianal itching", "Constipation"],
+    "timing": "Occurs with bowel movements, worse after straining",
+    "exacerbating": "Hard stools, prolonged sitting",
+    "relieving": "Warm baths, stool softener",
+    "severity_1_to_10": 4,
+    "relevant_negatives": ["No abdominal pain", "No weight loss", "No change in appetite"]
+  },
+  "pmh": { "conditions": ["Intermittent constipation"], "deny": ["Inflammatory bowel disease"], "surgeries": ["Tonsillectomy at age 12"], "hospitalisations": [], "trauma": [] },
+  "dh": { "current": ["Docusate sodium as needed"], "recent_changes": "Started stool softener three days ago", "otc": ["Ibuprofen occasionally"], "herbal": [] },
+  "allergies": [ { "substance": "None known", "reaction": "" } ],
+  "fh": { "father": "Type 2 diabetes", "mother": "Healthy", "siblings": "Younger brother healthy" },
+  "sh": {
+    "smoking": "5 cigarettes per day",
+    "alcohol": "4-6 units over weekends",
+    "recreational_drugs": "None",
+    "living": "Lives alone in rented flat",
+    "exercise": "Walks during deliveries",
+    "diet": "Low fibre, lots of takeaway food",
+    "occupation_detail": "Long hours driving"
+  },
+  "ros": {
+    "general": ["No fevers", "No weight loss"],
+    "cardio": ["No chest pain"],
+    "resp": ["No shortness of breath"],
+    "gi": ["No abdominal cramps", "No mucus", "No black stools"],
+    "neuro": ["No dizziness"]
+  },
+  "ice": { "ideas": "Thinks it's piles", "concerns": "Worried it could be something serious like cancer", "expectations": "Wants to know if more tests are needed" },
+  "examiner_guidance": {
+    "most_likely_diagnosis": "Symptomatic internal hemorrhoids",
+    "differentials": ["Anal fissure", "Distal colorectal neoplasm", "Inflammatory bowel disease"],
+    "immediate_investigations": ["Digital rectal examination", "Full blood count", "Consider flexible sigmoidoscopy depending on findings"]
+  },
+  "marking": {
+    "sections": [
+      { "id": 1, "title": "Introduction & rapport", "max_marks": 8, "weight": 0.1 },
+      { "id": 2, "title": "Presenting complaint & HPC", "max_marks": 24, "weight": 0.35 },
+      { "id": 3, "title": "Background history", "max_marks": 18, "weight": 0.25 },
+      { "id": 4, "title": "Focused examination", "max_marks": 10, "weight": 0.1 },
+      { "id": 5, "title": "Initial investigations & plan", "max_marks": 10, "weight": 0.1 },
+      { "id": 6, "title": "Risk assessment & closure", "max_marks": 6, "weight": 0.05 },
+      { "id": 7, "title": "Communication skills", "max_marks": 4, "weight": 0.05 }
+    ],
+    "total_marks": 80,
+    "pass_mark": 56,
+    "bands": { "Excellent": "70-80", "Good": "60-69", "Borderline": "56-59", "Fail": "<56" }
+  },
+  "disclosure_rules": {
+    "ladder": ["pc_one_line", "hpc_details_if_asked", "background_if_asked"],
+    "never_volunteer_lists": ["associated", "ros"],
+    "deny_vitals": true,
+    "style": { "avg_words_per_turn": [6, 14], "tone": "layperson", "nonverbal_cues": [] }
+  },
+  "rubric_map": {
+    "introduction": ["introduce_self", "confirm_identity", "gain_consent"],
+    "pc": ["nature_of_pain", "duration", "impact_on_function"],
+    "hpc": ["site", "onset", "character", "radiation", "associated", "timing", "exacerbating", "relieving", "severity", "red_flags"],
+    "background": ["pmh", "dh", "allergies", "fh", "sh"],
+    "exam": ["explain_exam", "cardio_exam", "resp_exam", "vitals"],
+    "plan": ["initial_investigations", "initial_management", "risk_discussion"],
+    "ros": ["cardio_screen", "resp_screen", "gi_screen"],
+    "ice": ["ideas", "concerns", "expectations"],
+    "closure": ["summarise", "safety_net", "check_questions"],
+    "communication": ["empathy", "active_listening", "plain_language"]
+  }
+}

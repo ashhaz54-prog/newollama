@@ -1,0 +1,124 @@
+{
+  "schemaVersion": "v2",
+  "id": "case_gi_004",
+  "meta": {
+    "title": "Cramping upper abdominal pain after meals",
+    "station_type": "history_taking",
+    "time_limit_sec": 900,
+    "candidate_brief": "You are the surgical SHO in the emergency department. Take a detailed history from this patient with upper abdominal pain and determine likely causes and risks.",
+    "difficulty": "intermediate",
+    "specialty": "gastroenterology",
+    "tags": ["biliary-colic", "abdominal-pain"],
+    "patient_script": {
+      "opening_statement": "I get this awful cramp under my ribs after I eat.",
+      "if_asked": {
+        "symptom_details": "It's a sharp, cramping pain under my right ribs that sometimes spreads to my back.",
+        "timing": "Started about two months ago, now happening twice a week, usually an hour after meals.",
+        "after_effects": "I feel nauseous and sweaty during the attacks, which last about an hour.",
+        "exacerbating": "Fatty meals like fried chicken trigger it.",
+        "relieving": "Sitting still and taking paracetamol helps a little; it eventually settles on its own.",
+        "associated_symptoms": "No vomiting or jaundice, but I do feel bloated. No change in bowel habits.",
+        "past_medical_history": "I had gestational diabetes in my last pregnancy but no other issues.",
+        "medications": "I take paracetamol when the pain comes and a daily multivitamin.",
+        "allergies": "I'm allergic to codeine; it makes me itch badly.",
+        "family_history": "Mum had gallbladder surgery in her 50s. Dad has high cholesterol.",
+        "social_history": "I don't smoke, have an occasional glass of wine, stay at home with my toddler, and try to walk daily though I've put on weight.",
+        "functional_status": "I've had to avoid certain foods and it worries me when the pain starts if I'm out with my child."
+      },
+      "collateral": {
+        "observer_note": "Husband says she curls up in pain for about an hour when it happens."
+      },
+      "emotional_tone": "Alert but apprehensive, winces when describing pain",
+      "do_not_volunteer": [
+        "Do not reveal diagnosis",
+        "Do not list investigations/results",
+        "Do not state management plan"
+      ]
+    }
+  },
+  "patient": {
+    "name": "Maria Lopez",
+    "age": 34,
+    "sex": "Female",
+    "occupation": "Stay-at-home parent",
+    "setting": "Emergency department",
+    "baseline_mood": "Anxious",
+    "baseline_body_language": "Protective hand over right upper quadrant",
+    "baseline_voice": "Normal volume, tense"
+  },
+  "pc": {
+    "symptom": "Right upper quadrant pain",
+    "duration": "2 months",
+    "one_liner": "After I eat certain foods I get a bad cramp under my right ribs."
+  },
+  "hpc": {
+    "site": "Right upper quadrant",
+    "onset": "Intermittent episodes over months",
+    "character": "Sharp cramping colicky pain",
+    "radiation": "To right shoulder blade",
+    "associated": ["Nausea", "Sweating", "Bloating"],
+    "timing": "Episodes last 45-60 minutes, follow fatty meals",
+    "exacerbating": "Fried or greasy foods",
+    "relieving": "Paracetamol, remaining still",
+    "severity_1_to_10": 7,
+    "relevant_negatives": ["No fever", "No jaundice", "No change in stool color"]
+  },
+  "pmh": { "conditions": ["Gestational diabetes (resolved)"], "deny": ["Diabetes", "Hypertension"], "surgeries": ["Caesarean section 3 years ago"], "hospitalisations": [], "trauma": [] },
+  "dh": { "current": ["Paracetamol prn", "Multivitamin"], "recent_changes": "No recent medication changes", "otc": ["Paracetamol"], "herbal": ["Occasional chamomile tea"] },
+  "allergies": [ { "substance": "Codeine", "reaction": "Pruritus" } ],
+  "fh": { "father": "Hypercholesterolemia", "mother": "Cholecystectomy for gallstones", "siblings": "Sister with obesity" },
+  "sh": {
+    "smoking": "Never",
+    "alcohol": "1-2 units per week",
+    "recreational_drugs": "None",
+    "living": "Lives with husband and toddler",
+    "exercise": "Walks stroller 3 times a week",
+    "diet": "High in convenience foods, working on healthier options",
+    "occupation_detail": "Full-time caregiver at home"
+  },
+  "ros": {
+    "general": ["No weight loss", "No fevers"],
+    "cardio": ["No chest pain"],
+    "resp": ["No shortness of breath"],
+    "gi": ["No vomiting", "No change in bowel habits", "No jaundice"],
+    "neuro": ["No syncope"]
+  },
+  "ice": { "ideas": "Thinks it might be gallstones like her mum", "concerns": "Worried it could suddenly get worse when she's alone with her child", "expectations": "Wants tests to confirm the cause and advice on treatment" },
+  "examiner_guidance": {
+    "most_likely_diagnosis": "Biliary colic secondary to gallstones",
+    "differentials": ["Peptic ulcer disease", "Functional dyspepsia", "Acute cholecystitis"],
+    "immediate_investigations": ["Baseline bloods including LFTs", "Abdominal ultrasound", "Urinalysis"]
+  },
+  "marking": {
+    "sections": [
+      { "id": 1, "title": "Introduction & rapport", "max_marks": 8, "weight": 0.1 },
+      { "id": 2, "title": "Presenting complaint & HPC", "max_marks": 24, "weight": 0.35 },
+      { "id": 3, "title": "Background history", "max_marks": 18, "weight": 0.25 },
+      { "id": 4, "title": "Focused examination", "max_marks": 10, "weight": 0.1 },
+      { "id": 5, "title": "Initial investigations & plan", "max_marks": 10, "weight": 0.1 },
+      { "id": 6, "title": "Risk assessment & closure", "max_marks": 6, "weight": 0.05 },
+      { "id": 7, "title": "Communication skills", "max_marks": 4, "weight": 0.05 }
+    ],
+    "total_marks": 80,
+    "pass_mark": 56,
+    "bands": { "Excellent": "70-80", "Good": "60-69", "Borderline": "56-59", "Fail": "<56" }
+  },
+  "disclosure_rules": {
+    "ladder": ["pc_one_line", "hpc_details_if_asked", "background_if_asked"],
+    "never_volunteer_lists": ["associated", "ros"],
+    "deny_vitals": true,
+    "style": { "avg_words_per_turn": [6, 14], "tone": "layperson", "nonverbal_cues": [] }
+  },
+  "rubric_map": {
+    "introduction": ["introduce_self", "confirm_identity", "gain_consent"],
+    "pc": ["nature_of_pain", "duration", "impact_on_function"],
+    "hpc": ["site", "onset", "character", "radiation", "associated", "timing", "exacerbating", "relieving", "severity", "red_flags"],
+    "background": ["pmh", "dh", "allergies", "fh", "sh"],
+    "exam": ["explain_exam", "cardio_exam", "resp_exam", "vitals"],
+    "plan": ["initial_investigations", "initial_management", "risk_discussion"],
+    "ros": ["cardio_screen", "resp_screen", "gi_screen"],
+    "ice": ["ideas", "concerns", "expectations"],
+    "closure": ["summarise", "safety_net", "check_questions"],
+    "communication": ["empathy", "active_listening", "plain_language"]
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "schemaVersion": "v2",
+  "id": "case_gi_009",
+  "meta": {
+    "title": "Constipation with narrow stools",
+    "station_type": "history_taking",
+    "time_limit_sec": 900,
+    "candidate_brief": "You are the senior house officer in the colorectal clinic. Take a detailed history from this patient referred for change in bowel habit.",
+    "difficulty": "intermediate",
+    "specialty": "gastroenterology",
+    "tags": ["change-in-bowel-habit", "colorectal"],
+    "patient_script": {
+      "opening_statement": "My bowels have slowed down and the stools are thin like pencils.",
+      "if_asked": {
+        "symptom_details": "I only go every three or four days now, and the stools are narrow and sometimes streaked with dark red blood.",
+        "timing": "Started about four months ago and has gradually worsened.",
+        "after_effects": "I feel bloated and tired afterwards.",
+        "exacerbating": "Red meat-heavy meals and stressful days make it worse.",
+        "relieving": "Drinking prune juice and taking fiber supplements help a bit but not like before.",
+        "associated_symptoms": "I've lost about 5 kilos, get occasional left lower tummy cramps, and feel more tired. No fevers.",
+        "past_medical_history": "High blood pressure and high cholesterol.",
+        "medications": "Take amlodipine, atorvastatin, and a daily aspirin.",
+        "allergies": "No known drug allergies.",
+        "family_history": "Brother diagnosed with colon cancer at 60; father had type 2 diabetes.",
+        "social_history": "I quit smoking 10 years ago, drink 1-2 beers on weekends, retired electrician living with wife, no illicit drugs.",
+        "functional_status": "I plan my day around toilet visits and feel anxious leaving the house."
+      },
+      "collateral": {
+        "observer_note": "Wife reports he has been more fatigued and pale."
+      },
+      "emotional_tone": "Worried but composed, sits upright with hands clasped",
+      "do_not_volunteer": [
+        "Do not reveal diagnosis",
+        "Do not list investigations/results",
+        "Do not state management plan"
+      ]
+    }
+  },
+  "patient": {
+    "name": "Peter Lawson",
+    "age": 64,
+    "sex": "Male",
+    "occupation": "Retired electrician",
+    "setting": "Outpatient colorectal clinic",
+    "baseline_mood": "Anxious",
+    "baseline_body_language": "Hands clasped, slight forward lean",
+    "baseline_voice": "Calm but strained"
+  },
+  "pc": {
+    "symptom": "Change in bowel habit",
+    "duration": "4 months",
+    "one_liner": "My bowels are sluggish and the stools are really thin now."
+  },
+  "hpc": {
+    "site": "Left lower abdomen",
+    "onset": "Gradual over months",
+    "character": "Constipation with pencil-thin stools and intermittent bleeding",
+    "radiation": "Cramping across lower abdomen",
+    "associated": ["Weight loss", "Fatigue", "Abdominal bloating"],
+    "timing": "Bowel movements every 3-4 days",
+    "exacerbating": "Low fiber meals, stress",
+    "relieving": "Fiber supplements, prune juice",
+    "severity_1_to_10": 5,
+    "relevant_negatives": ["No vomiting", "No black stools", "No urinary symptoms"]
+  },
+  "pmh": { "conditions": ["Hypertension", "Hyperlipidemia"], "deny": ["Inflammatory bowel disease"], "surgeries": ["Inguinal hernia repair age 40"], "hospitalisations": [], "trauma": [] },
+  "dh": { "current": ["Amlodipine 5mg OD", "Atorvastatin 20mg OD", "Aspirin 75mg OD"], "recent_changes": "No recent medication changes", "otc": ["Psyllium husk supplement"], "herbal": [] },
+  "allergies": [ { "substance": "None known", "reaction": "" } ],
+  "fh": { "father": "Type 2 diabetes", "mother": "Alive, osteoarthritis", "siblings": "Brother with colon cancer at 60" },
+  "sh": {
+    "smoking": "Former smoker, 20 pack-years, quit 10 years ago",
+    "alcohol": "2-4 units on weekends",
+    "recreational_drugs": "None",
+    "living": "Lives with wife",
+    "exercise": "Walks dog daily",
+    "diet": "Trying to eat more fibre, previously high in red meat",
+    "occupation_detail": "Retired, does DIY projects"
+  },
+  "ros": {
+    "general": ["5 kg weight loss", "Fatigue"],
+    "cardio": ["Occasional lightheadedness on standing"],
+    "resp": ["No breathlessness"],
+    "gi": ["No diarrhea", "No melena", "Occasional rectal bleeding"],
+    "neuro": ["No focal weakness", "No headaches"]
+  },
+  "ice": { "ideas": "Thinks something might be blocking his bowel", "concerns": "Worried it could be cancer like his brother", "expectations": "Wants colonoscopy and to know next steps" },
+  "examiner_guidance": {
+    "most_likely_diagnosis": "Left-sided colorectal carcinoma",
+    "differentials": ["Benign colorectal stricture", "Diverticular disease", "Irritable bowel syndrome"],
+    "immediate_investigations": ["Full blood count", "Fecal immunochemical test (if not already)", "Urgent colonoscopy", "CEA level"]
+  },
+  "marking": {
+    "sections": [
+      { "id": 1, "title": "Introduction & rapport", "max_marks": 8, "weight": 0.1 },
+      { "id": 2, "title": "Presenting complaint & HPC", "max_marks": 24, "weight": 0.35 },
+      { "id": 3, "title": "Background history", "max_marks": 18, "weight": 0.25 },
+      { "id": 4, "title": "Focused examination", "max_marks": 10, "weight": 0.1 },
+      { "id": 5, "title": "Initial investigations & plan", "max_marks": 10, "weight": 0.1 },
+      { "id": 6, "title": "Risk assessment & closure", "max_marks": 6, "weight": 0.05 },
+      { "id": 7, "title": "Communication skills", "max_marks": 4, "weight": 0.05 }
+    ],
+    "total_marks": 80,
+    "pass_mark": 56,
+    "bands": { "Excellent": "70-80", "Good": "60-69", "Borderline": "56-59", "Fail": "<56" }
+  },
+  "disclosure_rules": {
+    "ladder": ["pc_one_line", "hpc_details_if_asked", "background_if_asked"],
+    "never_volunteer_lists": ["associated", "ros"],
+    "deny_vitals": true,
+    "style": { "avg_words_per_turn": [6, 14], "tone": "layperson", "nonverbal_cues": [] }
+  },
+  "rubric_map": {
+    "introduction": ["introduce_self", "confirm_identity", "gain_consent"],
+    "pc": ["nature_of_pain", "duration", "impact_on_function"],
+    "hpc": ["site", "onset", "character", "radiation", "associated", "timing", "exacerbating", "relieving", "severity", "red_flags"],
+    "background": ["pmh", "dh", "allergies", "fh", "sh"],
+    "exam": ["explain_exam", "cardio_exam", "resp_exam", "vitals"],
+    "plan": ["initial_investigations", "initial_management", "risk_discussion"],
+    "ros": ["cardio_screen", "resp_screen", "gi_screen"],
+    "ice": ["ideas", "concerns", "expectations"],
+    "closure": ["summarise", "safety_net", "check_questions"],
+    "communication": ["empathy", "active_listening", "plain_language"]
+  }
+}

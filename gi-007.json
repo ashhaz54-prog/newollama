@@ -1,0 +1,124 @@
+{
+  "schemaVersion": "v2",
+  "id": "case_gi_007",
+  "meta": {
+    "title": "Progressive abdominal swelling and ankle puffiness",
+    "station_type": "history_taking",
+    "time_limit_sec": 900,
+    "candidate_brief": "You are the medical registrar in the hepatology day unit. Take a history from this patient complaining of abdominal distension and assess complications.",
+    "difficulty": "intermediate",
+    "specialty": "gastroenterology",
+    "tags": ["ascites", "cirrhosis"],
+    "patient_script": {
+      "opening_statement": "My belly has blown up and even my ankles are puffy.",
+      "if_asked": {
+        "symptom_details": "My stomach feels tight and swollen; my trousers barely fit and my ankles leave marks from socks.",
+        "timing": "Started gradually three weeks ago and has been getting worse.",
+        "after_effects": "I feel breathless when bending over and uncomfortable sleeping.",
+        "exacerbating": "Salty food and staying on my feet all day seem to make it worse.",
+        "relieving": "Lying flat with legs up helps the ankle swelling a bit.",
+        "associated_symptoms": "I've noticed needing to pee at night, some bruises on my arms, and occasional confusion in the evenings. No chest pain.",
+        "past_medical_history": "Known cirrhosis from hepatitis C, treated last year; had variceal banding previously.",
+        "medications": "Take spironolactone, furosemide, lactulose, and a vitamin supplement; sometimes forget afternoon lactulose.",
+        "allergies": "Allergic to latex; it gives me a rash.",
+        "family_history": "No liver disease in family; father had stroke at 70.",
+        "social_history": "I stopped drinking alcohol 18 months ago, used to drink heavily. I smoke 3 cigarettes a day, live with my sister, and do part-time admin work.",
+        "functional_status": "Struggling to tie my shoes and have taken sick leave because I'm so uncomfortable."
+      },
+      "collateral": {
+        "observer_note": "Sister reports he has been more forgetful in the evenings."
+      },
+      "emotional_tone": "Tired, mild shortness of breath while talking",
+      "do_not_volunteer": [
+        "Do not reveal diagnosis",
+        "Do not list investigations/results",
+        "Do not state management plan"
+      ]
+    }
+  },
+  "patient": {
+    "name": "Michael O'Connor",
+    "age": 52,
+    "sex": "Male",
+    "occupation": "Administrative assistant",
+    "setting": "Day case hepatology unit",
+    "baseline_mood": "Fatigued",
+    "baseline_body_language": "Sits upright holding abdomen",
+    "baseline_voice": "Low pitch, slightly breathless"
+  },
+  "pc": {
+    "symptom": "Abdominal distension",
+    "duration": "3 weeks",
+    "one_liner": "My belly keeps swelling and my ankles are puffed up."
+  },
+  "hpc": {
+    "site": "Abdomen",
+    "onset": "Gradual over weeks",
+    "character": "Progressive abdominal fullness with ankle edema",
+    "radiation": "None",
+    "associated": ["Peripheral edema", "Early satiety", "Orthopnea", "Mild confusion"],
+    "timing": "Worse by evening, slight relief overnight",
+    "exacerbating": "High salt meals, prolonged standing",
+    "relieving": "Leg elevation, resting",
+    "severity_1_to_10": 7,
+    "relevant_negatives": ["No hematemesis", "No black stools", "No fever"]
+  },
+  "pmh": { "conditions": ["Hepatitis C-related cirrhosis", "Hypertension"], "deny": ["Diabetes"], "surgeries": ["Variceal band ligation"], "hospitalisations": ["Admitted last year for ascites drainage"], "trauma": [] },
+  "dh": { "current": ["Spironolactone 100mg OD", "Furosemide 40mg OD", "Lactulose 15ml BD", "Multivitamin"], "recent_changes": "Dose of diuretics increased by GP last week", "otc": [], "herbal": ["Milk thistle capsules occasionally"] },
+  "allergies": [ { "substance": "Latex", "reaction": "Contact dermatitis" } ],
+  "fh": { "father": "Stroke at 70", "mother": "Rheumatoid arthritis", "siblings": "Sister healthy" },
+  "sh": {
+    "smoking": "3 cigarettes per day",
+    "alcohol": "Stopped 18 months ago (previous heavy use)",
+    "recreational_drugs": "None",
+    "living": "Lives with sister",
+    "exercise": "Limited due to fatigue",
+    "diet": "Trying low-salt diet but occasional takeaways",
+    "occupation_detail": "Part-time desk job, currently on sick leave"
+  },
+  "ros": {
+    "general": ["Mild weight gain from fluid", "No fevers"],
+    "cardio": ["No chest pain", "Mild orthopnea"],
+    "resp": ["Mild exertional breathlessness"],
+    "gi": ["No vomiting", "No GI bleeding", "Early satiety"],
+    "neuro": ["Occasional forgetfulness", "No focal deficits"]
+  },
+  "ice": { "ideas": "Thinks fluid is building up again", "concerns": "Worried it means his liver is failing", "expectations": "Hopes for drainage and advice on keeping it from coming back" },
+  "examiner_guidance": {
+    "most_likely_diagnosis": "Decompensated cirrhosis with recurrent ascites",
+    "differentials": ["Right-sided heart failure", "Nephrotic syndrome", "Malignancy-related ascites"],
+    "immediate_investigations": ["Physical exam including shifting dullness", "Blood tests including LFTs, U&E, coagulation", "Diagnostic paracentesis", "Ultrasound abdomen"]
+  },
+  "marking": {
+    "sections": [
+      { "id": 1, "title": "Introduction & rapport", "max_marks": 8, "weight": 0.1 },
+      { "id": 2, "title": "Presenting complaint & HPC", "max_marks": 24, "weight": 0.35 },
+      { "id": 3, "title": "Background history", "max_marks": 18, "weight": 0.25 },
+      { "id": 4, "title": "Focused examination", "max_marks": 10, "weight": 0.1 },
+      { "id": 5, "title": "Initial investigations & plan", "max_marks": 10, "weight": 0.1 },
+      { "id": 6, "title": "Risk assessment & closure", "max_marks": 6, "weight": 0.05 },
+      { "id": 7, "title": "Communication skills", "max_marks": 4, "weight": 0.05 }
+    ],
+    "total_marks": 80,
+    "pass_mark": 56,
+    "bands": { "Excellent": "70-80", "Good": "60-69", "Borderline": "56-59", "Fail": "<56" }
+  },
+  "disclosure_rules": {
+    "ladder": ["pc_one_line", "hpc_details_if_asked", "background_if_asked"],
+    "never_volunteer_lists": ["associated", "ros"],
+    "deny_vitals": true,
+    "style": { "avg_words_per_turn": [6, 14], "tone": "layperson", "nonverbal_cues": [] }
+  },
+  "rubric_map": {
+    "introduction": ["introduce_self", "confirm_identity", "gain_consent"],
+    "pc": ["nature_of_pain", "duration", "impact_on_function"],
+    "hpc": ["site", "onset", "character", "radiation", "associated", "timing", "exacerbating", "relieving", "severity", "red_flags"],
+    "background": ["pmh", "dh", "allergies", "fh", "sh"],
+    "exam": ["explain_exam", "cardio_exam", "resp_exam", "vitals"],
+    "plan": ["initial_investigations", "initial_management", "risk_discussion"],
+    "ros": ["cardio_screen", "resp_screen", "gi_screen"],
+    "ice": ["ideas", "concerns", "expectations"],
+    "closure": ["summarise", "safety_net", "check_questions"],
+    "communication": ["empathy", "active_listening", "plain_language"]
+  }
+}
