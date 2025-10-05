@@ -1,0 +1,124 @@
+{
+  "schemaVersion": "v2",
+  "id": "case_gi_010",
+  "meta": {
+    "title": "Sudden right lower tummy pain and fever",
+    "station_type": "history_taking",
+    "time_limit_sec": 900,
+    "candidate_brief": "You are the surgical SHO in the emergency department. Take a focused history from this patient presenting with acute right lower quadrant pain and assess for urgent concerns.",
+    "difficulty": "beginner",
+    "specialty": "gastroenterology",
+    "tags": ["acute-abdomen", "appendicitis"],
+    "patient_script": {
+      "opening_statement": "I've had this sharp pain in my lower right tummy since last night.",
+      "if_asked": {
+        "symptom_details": "It started near my belly button and moved to the lower right side; it's a sharp stabbing pain.",
+        "timing": "Began about 14 hours ago after dinner and has been constant, getting worse.",
+        "after_effects": "I feel nauseous and haven't wanted to eat; I vomited once this morning.",
+        "exacerbating": "Walking or hitting bumps in the car makes it worse.",
+        "relieving": "Curling up with knees bent helps a little.",
+        "associated_symptoms": "I've had a low-grade fever, chills, and my bowels haven't moved since yesterday morning. No urinary symptoms or vaginal discharge.",
+        "past_medical_history": "Generally healthy; only tonsillitis as a child.",
+        "medications": "Just took paracetamol 1g this morning.",
+        "allergies": "No known drug allergies.",
+        "family_history": "No major abdominal problems in family.",
+        "social_history": "Non-smoker, rarely drinks, lives with roommates, works as a barista, not sexually active currently.",
+        "functional_status": "Had to leave work early today because of the pain."
+      },
+      "collateral": {
+        "observer_note": "Roommate notes she was hunched over and sweaty overnight."
+      },
+      "emotional_tone": "Uncomfortable, guarding abdomen, grimacing with movement",
+      "do_not_volunteer": [
+        "Do not reveal diagnosis",
+        "Do not list investigations/results",
+        "Do not state management plan"
+      ]
+    }
+  },
+  "patient": {
+    "name": "Emily Chen",
+    "age": 23,
+    "sex": "Female",
+    "occupation": "Barista",
+    "setting": "Emergency department",
+    "baseline_mood": "Distressed",
+    "baseline_body_language": "Guarding right lower abdomen",
+    "baseline_voice": "Tense, slightly breathless"
+  },
+  "pc": {
+    "symptom": "Right lower quadrant pain",
+    "duration": "14 hours",
+    "one_liner": "Sharp pain in my lower right belly that started last night."
+  },
+  "hpc": {
+    "site": "Right iliac fossa",
+    "onset": "Acute onset progressing over hours",
+    "character": "Sharp constant pain",
+    "radiation": "Initially periumbilical then localised",
+    "associated": ["Anorexia", "Nausea", "Single episode of vomiting", "Low-grade fever"],
+    "timing": "Continuous since onset",
+    "exacerbating": "Movement, bumps, coughing",
+    "relieving": "Flexing hips, lying still",
+    "severity_1_to_10": 8,
+    "relevant_negatives": ["No urinary symptoms", "No vaginal bleeding", "No diarrhoea"]
+  },
+  "pmh": { "conditions": [], "deny": ["IBD", "Kidney stones"], "surgeries": [], "hospitalisations": [], "trauma": [] },
+  "dh": { "current": ["Paracetamol 1g taken once"], "recent_changes": "None", "otc": ["Paracetamol"], "herbal": [] },
+  "allergies": [ { "substance": "None known", "reaction": "" } ],
+  "fh": { "father": "Healthy", "mother": "Migraine", "siblings": "Younger brother healthy" },
+  "sh": {
+    "smoking": "Never",
+    "alcohol": "Occasional glass of wine", 
+    "recreational_drugs": "None",
+    "living": "Lives with two roommates",
+    "exercise": "Practices yoga twice weekly",
+    "diet": "Generally balanced, had takeaway noodles last night",
+    "occupation_detail": "Morning shifts at coffee shop"
+  },
+  "ros": {
+    "general": ["Feverish", "No weight loss"],
+    "cardio": ["No chest pain"],
+    "resp": ["No shortness of breath"],
+    "gi": ["No diarrhoea", "No jaundice"],
+    "neuro": ["No headaches"]
+  },
+  "ice": { "ideas": "Thinks it might be something she ate", "concerns": "Worried it's something serious needing surgery", "expectations": "Wants pain relief and to know if she needs an operation" },
+  "examiner_guidance": {
+    "most_likely_diagnosis": "Acute appendicitis",
+    "differentials": ["Mesenteric adenitis", "Gastroenteritis", "Ruptured ovarian cyst", "Urinary tract infection"],
+    "immediate_investigations": ["Physical examination focusing on abdomen and pelvis", "Pregnancy test", "Blood tests including FBC and CRP", "Urinalysis", "Consider ultrasound"]
+  },
+  "marking": {
+    "sections": [
+      { "id": 1, "title": "Introduction & rapport", "max_marks": 8, "weight": 0.1 },
+      { "id": 2, "title": "Presenting complaint & HPC", "max_marks": 24, "weight": 0.35 },
+      { "id": 3, "title": "Background history", "max_marks": 18, "weight": 0.25 },
+      { "id": 4, "title": "Focused examination", "max_marks": 10, "weight": 0.1 },
+      { "id": 5, "title": "Initial investigations & plan", "max_marks": 10, "weight": 0.1 },
+      { "id": 6, "title": "Risk assessment & closure", "max_marks": 6, "weight": 0.05 },
+      { "id": 7, "title": "Communication skills", "max_marks": 4, "weight": 0.05 }
+    ],
+    "total_marks": 80,
+    "pass_mark": 56,
+    "bands": { "Excellent": "70-80", "Good": "60-69", "Borderline": "56-59", "Fail": "<56" }
+  },
+  "disclosure_rules": {
+    "ladder": ["pc_one_line", "hpc_details_if_asked", "background_if_asked"],
+    "never_volunteer_lists": ["associated", "ros"],
+    "deny_vitals": true,
+    "style": { "avg_words_per_turn": [6, 14], "tone": "layperson", "nonverbal_cues": [] }
+  },
+  "rubric_map": {
+    "introduction": ["introduce_self", "confirm_identity", "gain_consent"],
+    "pc": ["nature_of_pain", "duration", "impact_on_function"],
+    "hpc": ["site", "onset", "character", "radiation", "associated", "timing", "exacerbating", "relieving", "severity", "red_flags"],
+    "background": ["pmh", "dh", "allergies", "fh", "sh"],
+    "exam": ["explain_exam", "cardio_exam", "resp_exam", "vitals"],
+    "plan": ["initial_investigations", "initial_management", "risk_discussion"],
+    "ros": ["cardio_screen", "resp_screen", "gi_screen"],
+    "ice": ["ideas", "concerns", "expectations"],
+    "closure": ["summarise", "safety_net", "check_questions"],
+    "communication": ["empathy", "active_listening", "plain_language"]
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "schemaVersion": "v2",
+  "id": "case_gi_003",
+  "meta": {
+    "title": "Yellowing skin with dark urine",
+    "station_type": "history_taking",
+    "time_limit_sec": 900,
+    "candidate_brief": "You are seeing this patient in the medical admissions unit after referral by their GP for new jaundice. Take a focused history and identify key concerns.",
+    "difficulty": "intermediate",
+    "specialty": "gastroenterology",
+    "tags": ["jaundice", "hepatitis"],
+    "patient_script": {
+      "opening_statement": "My skin looks yellow and my urine has gone really dark.",
+      "if_asked": {
+        "symptom_details": "Friends pointed out my eyes were yellow last week, and I've noticed my pee is like tea.",
+        "timing": "First noticed five days ago, getting a bit more obvious each day.",
+        "after_effects": "I feel tired and a bit nauseated but no vomiting.",
+        "exacerbating": "Nothing particular makes it worse but I'm more aware after eating greasy food.",
+        "relieving": "Resting helps with the fatigue but the yellow color stays.",
+        "associated_symptoms": "I've had some right upper tummy discomfort, poor appetite, and pale stools. No fevers or confusion.",
+        "past_medical_history": "I had mononucleosis at university but otherwise healthy.",
+        "medications": "I take a combined oral contraceptive pill and paracetamol occasionally for headaches.",
+        "allergies": "No known drug allergies.",
+        "family_history": "No liver disease in the family; mum has hypothyroidism.",
+        "social_history": "I don't smoke, drink socially maybe 6 units a week, work as a barista, live with two roommates, and I got a tattoo at a studio abroad two months ago.",
+        "functional_status": "I've missed a couple shifts because I feel wiped out."
+      },
+      "collateral": {
+        "observer_note": "Roommate noticed she has been more tired and off food."
+      },
+      "emotional_tone": "Concerned but cooperative, occasionally rubs right upper abdomen",
+      "do_not_volunteer": [
+        "Do not reveal diagnosis",
+        "Do not list investigations/results",
+        "Do not state management plan"
+      ]
+    }
+  },
+  "patient": {
+    "name": "Sophie Allen",
+    "age": 26,
+    "sex": "Female",
+    "occupation": "Barista",
+    "setting": "Acute medical unit",
+    "baseline_mood": "Fatigued",
+    "baseline_body_language": "Slouched posture, hands on lap",
+    "baseline_voice": "Slow, slightly hoarse"
+  },
+  "pc": {
+    "symptom": "Jaundice",
+    "duration": "5 days",
+    "one_liner": "My skin and eyes have turned yellow."
+  },
+  "hpc": {
+    "site": "Systemic",
+    "onset": "Subacute over days",
+    "character": "Yellow discoloration with dark urine and pale stools",
+    "radiation": "None",
+    "associated": ["Right upper quadrant discomfort", "Fatigue", "Poor appetite"],
+    "timing": "Persistent, slowly worsening",
+    "exacerbating": "Noticed more after fatty meals",
+    "relieving": "Rest provides mild relief of tiredness",
+    "severity_1_to_10": 5,
+    "relevant_negatives": ["No high fevers", "No confusion", "No bleeding"]
+  },
+  "pmh": { "conditions": ["History of infectious mononucleosis"], "deny": ["Chronic liver disease"], "surgeries": [], "hospitalisations": [], "trauma": [] },
+  "dh": { "current": ["Combined oral contraceptive pill"], "recent_changes": "No recent prescription changes", "otc": ["Paracetamol up to 1g occasionally"], "herbal": ["Occasional turmeric tea"] },
+  "allergies": [ { "substance": "None known", "reaction": "" } ],
+  "fh": { "father": "Hypertension", "mother": "Hypothyroidism", "siblings": "Brother healthy" },
+  "sh": {
+    "smoking": "Never",
+    "alcohol": "6 units per week",
+    "recreational_drugs": "Occasional cannabis at parties (last use 1 month ago)",
+    "living": "Flatshare with friends",
+    "exercise": "Yoga twice a week",
+    "diet": "Mixed diet, recently poor appetite",
+    "occupation_detail": "Early morning shifts, handles drinks and cash"
+  },
+  "ros": {
+    "general": ["Weight stable", "No night sweats"],
+    "cardio": ["No palpitations"],
+    "resp": ["No shortness of breath"],
+    "gi": ["No vomiting", "No abdominal swelling", "No GI bleeding"],
+    "neuro": ["No headaches", "No confusion"]
+  },
+  "ice": { "ideas": "Wonders if it might be something wrong with her liver", "concerns": "Scared it could be permanent damage", "expectations": "Hopes to find out what's causing it and if she needs to stay in hospital" },
+  "examiner_guidance": {
+    "most_likely_diagnosis": "Acute viral hepatitis (likely hepatitis B)",
+    "differentials": ["Drug-induced liver injury", "Gallstone obstruction", "Autoimmune hepatitis"],
+    "immediate_investigations": ["Liver function tests", "Coagulation profile", "Hepatitis serology", "Abdominal ultrasound"]
+  },
+  "marking": {
+    "sections": [
+      { "id": 1, "title": "Introduction & rapport", "max_marks": 8, "weight": 0.1 },
+      { "id": 2, "title": "Presenting complaint & HPC", "max_marks": 24, "weight": 0.35 },
+      { "id": 3, "title": "Background history", "max_marks": 18, "weight": 0.25 },
+      { "id": 4, "title": "Focused examination", "max_marks": 10, "weight": 0.1 },
+      { "id": 5, "title": "Initial investigations & plan", "max_marks": 10, "weight": 0.1 },
+      { "id": 6, "title": "Risk assessment & closure", "max_marks": 6, "weight": 0.05 },
+      { "id": 7, "title": "Communication skills", "max_marks": 4, "weight": 0.05 }
+    ],
+    "total_marks": 80,
+    "pass_mark": 56,
+    "bands": { "Excellent": "70-80", "Good": "60-69", "Borderline": "56-59", "Fail": "<56" }
+  },
+  "disclosure_rules": {
+    "ladder": ["pc_one_line", "hpc_details_if_asked", "background_if_asked"],
+    "never_volunteer_lists": ["associated", "ros"],
+    "deny_vitals": true,
+    "style": { "avg_words_per_turn": [6, 14], "tone": "layperson", "nonverbal_cues": [] }
+  },
+  "rubric_map": {
+    "introduction": ["introduce_self", "confirm_identity", "gain_consent"],
+    "pc": ["nature_of_pain", "duration", "impact_on_function"],
+    "hpc": ["site", "onset", "character", "radiation", "associated", "timing", "exacerbating", "relieving", "severity", "red_flags"],
+    "background": ["pmh", "dh", "allergies", "fh", "sh"],
+    "exam": ["explain_exam", "cardio_exam", "resp_exam", "vitals"],
+    "plan": ["initial_investigations", "initial_management", "risk_discussion"],
+    "ros": ["cardio_screen", "resp_screen", "gi_screen"],
+    "ice": ["ideas", "concerns", "expectations"],
+    "closure": ["summarise", "safety_net", "check_questions"],
+    "communication": ["empathy", "active_listening", "plain_language"]
+  }
+}

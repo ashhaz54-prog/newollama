@@ -1,0 +1,124 @@
+{
+  "schemaVersion": "v2",
+  "id": "case_gi_008",
+  "meta": {
+    "title": "Difficulty swallowing solid foods",
+    "station_type": "history_taking",
+    "time_limit_sec": 900,
+    "candidate_brief": "You are assessing this patient in the rapid access endoscopy clinic. Take a focused history regarding their swallowing difficulties and screen for alarm features.",
+    "difficulty": "intermediate",
+    "specialty": "gastroenterology",
+    "tags": ["dysphagia", "esophagus"],
+    "patient_script": {
+      "opening_statement": "Food keeps getting stuck when I swallow, especially meat.",
+      "if_asked": {
+        "symptom_details": "Solid foods, especially meat or bread, feel like they hang up in my chest and I have to sip water to get them down.",
+        "timing": "Started three months ago and has slowly worsened; now happens almost every meal.",
+        "after_effects": "Sometimes I regurgitate undigested food if I try to force it, which is embarrassing.",
+        "exacerbating": "Dry foods and eating quickly make it worse.",
+        "relieving": "Cutting food into small pieces and drinking warm tea helps.",
+        "associated_symptoms": "I've lost about 4 kilos unintentionally and have occasional heartburn but no vomiting or coughing when drinking.",
+        "past_medical_history": "History of long-standing heartburn and was told years ago I had Barrett's esophagus.",
+        "medications": "Take omeprazole 20mg once daily; sometimes forget evening dose when prescribed twice daily.",
+        "allergies": "Allergic to aspirin; it gives me hives.",
+        "family_history": "No esophageal cancer; mother had breast cancer.",
+        "social_history": "Former smoker (quit 5 years ago, 20 pack-year history), drinks a glass of wine most nights, works as a teacher, lives with husband.",
+        "functional_status": "Avoiding meals out and takes longer to finish meals, causing concern at work lunchtimes."
+      },
+      "collateral": {
+        "observer_note": "Husband says she chews excessively and drinks lots of water to help food go down."
+      },
+      "emotional_tone": "Mildly anxious, careful speech, occasional throat clearing",
+      "do_not_volunteer": [
+        "Do not reveal diagnosis",
+        "Do not list investigations/results",
+        "Do not state management plan"
+      ]
+    }
+  },
+  "patient": {
+    "name": "Helen Carter",
+    "age": 58,
+    "sex": "Female",
+    "occupation": "Secondary school teacher",
+    "setting": "Rapid access endoscopy clinic",
+    "baseline_mood": "Concerned",
+    "baseline_body_language": "Sits upright, touches throat intermittently",
+    "baseline_voice": "Measured, slightly hoarse"
+  },
+  "pc": {
+    "symptom": "Dysphagia to solids",
+    "duration": "3 months",
+    "one_liner": "Solid foods feel like they get stuck partway down."
+  },
+  "hpc": {
+    "site": "Mid-oesophageal region",
+    "onset": "Gradual progressive",
+    "character": "Sensation of food sticking",
+    "radiation": "Occasional discomfort to back",
+    "associated": ["Weight loss", "Regurgitation", "Heartburn"],
+    "timing": "Occurs with most meals",
+    "exacerbating": "Dry solid foods, rapid eating",
+    "relieving": "Fluids, chewing thoroughly",
+    "severity_1_to_10": 6,
+    "relevant_negatives": ["No difficulty with liquids", "No odynophagia", "No choking episodes"]
+  },
+  "pmh": { "conditions": ["Barrett's esophagus", "Gastroesophageal reflux"], "deny": ["Stroke"], "surgeries": ["Appendectomy age 20"], "hospitalisations": [], "trauma": [] },
+  "dh": { "current": ["Omeprazole 20mg OD"], "recent_changes": "GP suggested increasing to BD but patient inconsistently follows", "otc": ["Antacid tablets occasionally"], "herbal": [] },
+  "allergies": [ { "substance": "Aspirin", "reaction": "Urticaria" } ],
+  "fh": { "father": "Hypertension", "mother": "Breast cancer", "siblings": "Brother with GERD" },
+  "sh": {
+    "smoking": "Former smoker, quit 5 years ago",
+    "alcohol": "7 units per week",
+    "recreational_drugs": "None",
+    "living": "Lives with husband",
+    "exercise": "Walks dog daily",
+    "diet": "Avoiding red meat and bread due to symptoms",
+    "occupation_detail": "Full-time teacher, eats in staff room"
+  },
+  "ros": {
+    "general": ["4 kg weight loss", "No fevers"],
+    "cardio": ["No chest pain"],
+    "resp": ["No cough", "No aspiration"],
+    "gi": ["Occasional heartburn", "No vomiting", "No hematemesis"],
+    "neuro": ["No limb weakness", "No speech difficulties"]
+  },
+  "ice": { "ideas": "Worried the Barrett's has worsened", "concerns": "Fear of cancer and choking in public", "expectations": "Wants urgent endoscopy and advice" },
+  "examiner_guidance": {
+    "most_likely_diagnosis": "Progressive peptic stricture secondary to chronic reflux",
+    "differentials": ["Esophageal carcinoma", "Eosinophilic esophagitis", "Achalasia"],
+    "immediate_investigations": ["Urgent upper GI endoscopy", "Barium swallow if endoscopy delayed", "Full blood count"]
+  },
+  "marking": {
+    "sections": [
+      { "id": 1, "title": "Introduction & rapport", "max_marks": 8, "weight": 0.1 },
+      { "id": 2, "title": "Presenting complaint & HPC", "max_marks": 24, "weight": 0.35 },
+      { "id": 3, "title": "Background history", "max_marks": 18, "weight": 0.25 },
+      { "id": 4, "title": "Focused examination", "max_marks": 10, "weight": 0.1 },
+      { "id": 5, "title": "Initial investigations & plan", "max_marks": 10, "weight": 0.1 },
+      { "id": 6, "title": "Risk assessment & closure", "max_marks": 6, "weight": 0.05 },
+      { "id": 7, "title": "Communication skills", "max_marks": 4, "weight": 0.05 }
+    ],
+    "total_marks": 80,
+    "pass_mark": 56,
+    "bands": { "Excellent": "70-80", "Good": "60-69", "Borderline": "56-59", "Fail": "<56" }
+  },
+  "disclosure_rules": {
+    "ladder": ["pc_one_line", "hpc_details_if_asked", "background_if_asked"],
+    "never_volunteer_lists": ["associated", "ros"],
+    "deny_vitals": true,
+    "style": { "avg_words_per_turn": [6, 14], "tone": "layperson", "nonverbal_cues": [] }
+  },
+  "rubric_map": {
+    "introduction": ["introduce_self", "confirm_identity", "gain_consent"],
+    "pc": ["nature_of_pain", "duration", "impact_on_function"],
+    "hpc": ["site", "onset", "character", "radiation", "associated", "timing", "exacerbating", "relieving", "severity", "red_flags"],
+    "background": ["pmh", "dh", "allergies", "fh", "sh"],
+    "exam": ["explain_exam", "cardio_exam", "resp_exam", "vitals"],
+    "plan": ["initial_investigations", "initial_management", "risk_discussion"],
+    "ros": ["cardio_screen", "resp_screen", "gi_screen"],
+    "ice": ["ideas", "concerns", "expectations"],
+    "closure": ["summarise", "safety_net", "check_questions"],
+    "communication": ["empathy", "active_listening", "plain_language"]
+  }
+}

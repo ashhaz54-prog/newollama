@@ -1,0 +1,124 @@
+{
+  "schemaVersion": "v2",
+  "id": "case_gi_005",
+  "meta": {
+    "title": "Chronic diarrhea with weight loss",
+    "station_type": "history_taking",
+    "time_limit_sec": 900,
+    "candidate_brief": "You are the registrar in the gastroenterology clinic. Take a comprehensive history from this patient with chronic diarrhea and assess for red flags and impact.",
+    "difficulty": "advanced",
+    "specialty": "gastroenterology",
+    "tags": ["chronic-diarrhea", "ibd"],
+    "patient_script": {
+      "opening_statement": "I've been running to the toilet with loose stools for months and I'm losing weight.",
+      "if_asked": {
+        "symptom_details": "I pass loose, sometimes watery stools about five times a day, occasionally with streaks of blood.",
+        "timing": "Started about eight months ago, slowly getting worse with flare-ups lasting days.",
+        "after_effects": "I feel exhausted and crampy afterwards.",
+        "exacerbating": "Stress and spicy food seem to trigger flares.",
+        "relieving": "Cutting dairy and resting help a bit, and loperamide slows it temporarily.",
+        "associated_symptoms": "I have crampy lower tummy pain, occasional mouth ulcers, joint aches, and night sweats. No vomiting.",
+        "past_medical_history": "I had iron deficiency anemia last year and eczema as a child.",
+        "medications": "Currently taking ferrous sulfate prescribed by GP and loperamide when needed.",
+        "allergies": "Allergic to shellfish; it causes hives.",
+        "family_history": "My older sister has ulcerative colitis. No colon cancer in the family.",
+        "social_history": "I don't smoke, I vape occasionally without nicotine, drink socially, work as a software developer mostly from home, and live with my partner.",
+        "functional_status": "I've had to work from home more and avoid eating out because I'm worried about needing a toilet quickly."
+      },
+      "collateral": {
+        "observer_note": "Partner notes he wakes at night to use the toilet and seems more tired."
+      },
+      "emotional_tone": "Tired but open, maintains eye contact",
+      "do_not_volunteer": [
+        "Do not reveal diagnosis",
+        "Do not list investigations/results",
+        "Do not state management plan"
+      ]
+    }
+  },
+  "patient": {
+    "name": "Liam Gallagher",
+    "age": 31,
+    "sex": "Male",
+    "occupation": "Software developer",
+    "setting": "Outpatient clinic",
+    "baseline_mood": "Concerned",
+    "baseline_body_language": "Restless leg bouncing",
+    "baseline_voice": "Slightly hoarse"
+  },
+  "pc": {
+    "symptom": "Chronic diarrhea",
+    "duration": "8 months",
+    "one_liner": "I've had ongoing loose stools for months and I'm dropping weight."
+  },
+  "hpc": {
+    "site": "Diffuse lower abdomen",
+    "onset": "Insidious over months",
+    "character": "Loose watery stools with urgency and cramps",
+    "radiation": "Crampy pain across lower abdomen",
+    "associated": ["Rectal bleeding", "Mouth ulcers", "Arthralgia", "Night sweats"],
+    "timing": "Symptoms daily with intermittent flares lasting several days",
+    "exacerbating": "Stress, spicy foods",
+    "relieving": "Rest, avoiding dairy, loperamide",
+    "severity_1_to_10": 6,
+    "relevant_negatives": ["No recent travel", "No antibiotic use", "No vomiting"]
+  },
+  "pmh": { "conditions": ["Iron deficiency anemia", "Eczema"], "deny": ["Diabetes"], "surgeries": [], "hospitalisations": [], "trauma": [] },
+  "dh": { "current": ["Ferrous sulfate 200mg OD", "Loperamide 2mg prn"], "recent_changes": "Started ferrous sulfate 3 months ago", "otc": ["Loperamide"], "herbal": ["Probiotic supplement"] },
+  "allergies": [ { "substance": "Shellfish", "reaction": "Urticaria" } ],
+  "fh": { "father": "Hypertension", "mother": "Irritable bowel syndrome", "siblings": "Sister with ulcerative colitis" },
+  "sh": {
+    "smoking": "Never smoked, occasional nicotine-free vaping",
+    "alcohol": "Up to 8 units per week",
+    "recreational_drugs": "None",
+    "living": "Lives with partner in apartment",
+    "exercise": "Cycling twice weekly when well",
+    "diet": "Trying low FODMAP diet, reduced dairy",
+    "occupation_detail": "Remote software work with flexible hours"
+  },
+  "ros": {
+    "general": ["Unintentional 6kg weight loss", "Night sweats"],
+    "cardio": ["No palpitations"],
+    "resp": ["No breathlessness"],
+    "gi": ["No vomiting", "No jaundice"],
+    "neuro": ["Occasional headaches"]
+  },
+  "ice": { "ideas": "Thinks it could be inflammatory bowel disease like his sister", "concerns": "Worried about needing surgery or developing cancer", "expectations": "Hopes for tests and a treatment plan to control symptoms" },
+  "examiner_guidance": {
+    "most_likely_diagnosis": "Crohn's disease involving terminal ileum and colon",
+    "differentials": ["Ulcerative colitis", "Coeliac disease", "Chronic infection (e.g., giardiasis)", "Irritable bowel syndrome"],
+    "immediate_investigations": ["Blood tests including FBC, CRP, ferritin", "Stool calprotectin", "Coeliac serology", "Colonoscopy with biopsies"]
+  },
+  "marking": {
+    "sections": [
+      { "id": 1, "title": "Introduction & rapport", "max_marks": 8, "weight": 0.1 },
+      { "id": 2, "title": "Presenting complaint & HPC", "max_marks": 24, "weight": 0.35 },
+      { "id": 3, "title": "Background history", "max_marks": 18, "weight": 0.25 },
+      { "id": 4, "title": "Focused examination", "max_marks": 10, "weight": 0.1 },
+      { "id": 5, "title": "Initial investigations & plan", "max_marks": 10, "weight": 0.1 },
+      { "id": 6, "title": "Risk assessment & closure", "max_marks": 6, "weight": 0.05 },
+      { "id": 7, "title": "Communication skills", "max_marks": 4, "weight": 0.05 }
+    ],
+    "total_marks": 80,
+    "pass_mark": 56,
+    "bands": { "Excellent": "70-80", "Good": "60-69", "Borderline": "56-59", "Fail": "<56" }
+  },
+  "disclosure_rules": {
+    "ladder": ["pc_one_line", "hpc_details_if_asked", "background_if_asked"],
+    "never_volunteer_lists": ["associated", "ros"],
+    "deny_vitals": true,
+    "style": { "avg_words_per_turn": [6, 14], "tone": "layperson", "nonverbal_cues": [] }
+  },
+  "rubric_map": {
+    "introduction": ["introduce_self", "confirm_identity", "gain_consent"],
+    "pc": ["nature_of_pain", "duration", "impact_on_function"],
+    "hpc": ["site", "onset", "character", "radiation", "associated", "timing", "exacerbating", "relieving", "severity", "red_flags"],
+    "background": ["pmh", "dh", "allergies", "fh", "sh"],
+    "exam": ["explain_exam", "cardio_exam", "resp_exam", "vitals"],
+    "plan": ["initial_investigations", "initial_management", "risk_discussion"],
+    "ros": ["cardio_screen", "resp_screen", "gi_screen"],
+    "ice": ["ideas", "concerns", "expectations"],
+    "closure": ["summarise", "safety_net", "check_questions"],
+    "communication": ["empathy", "active_listening", "plain_language"]
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "schemaVersion": "v2",
+  "id": "case_gi_001",
+  "meta": {
+    "title": "Persistent heartburn and regurgitation",
+    "station_type": "history_taking",
+    "time_limit_sec": 900,
+    "candidate_brief": "You are the junior doctor in the gastroenterology clinic. Take a focused history from this patient who has been referred by their GP with upper abdominal discomfort.",
+    "difficulty": "beginner",
+    "specialty": "gastroenterology",
+    "tags": ["dyspepsia", "gerd"],
+    "patient_script": {
+      "opening_statement": "Doctor, this burning in my chest just won't quit.",
+      "if_asked": {
+        "symptom_details": "It's a burning feeling behind my breastbone that sometimes brings up sour fluid into my mouth.",
+        "timing": "It started about four months ago and happens most days, especially after dinner.",
+        "after_effects": "I feel bloated and a bit nauseous after an episode.",
+        "exacerbating": "Large, late meals and lying down too soon make it worse.",
+        "relieving": "Sipping water and taking the over-the-counter antacid help a little.",
+        "associated_symptoms": "I sometimes get a dry cough at night but no vomiting, black stools, or trouble swallowing.",
+        "past_medical_history": "I have mild asthma since childhood and seasonal allergies.",
+        "medications": "I use my blue inhaler occasionally and recently started taking chewable antacids after meals.",
+        "allergies": "I'm allergic to penicillin; it gave me a rash as a kid.",
+        "family_history": "My dad has high blood pressure; no stomach problems that I know of.",
+        "social_history": "I don't smoke, drink a glass of wine on weekends, live with my wife, and work as an accountant. I don't use drugs.",
+        "functional_status": "I still go to work, but the heartburn keeps me up at night and I'm tired the next day."
+      },
+      "collateral": {
+        "observer_note": "Spouse says patient wakes up coughing from acid taste."
+      },
+      "emotional_tone": "Slightly anxious, rubs chest when describing symptoms.",
+      "do_not_volunteer": [
+        "Do not reveal diagnosis",
+        "Do not list investigations/results",
+        "Do not state management plan"
+      ]
+    }
+  },
+  "patient": {
+    "name": "Alex Morgan",
+    "age": 38,
+    "sex": "Male",
+    "occupation": "Accountant",
+    "setting": "Outpatient clinic",
+    "baseline_mood": "Worried",
+    "baseline_body_language": "Leaning forward, hand on upper abdomen",
+    "baseline_voice": "Soft but clear"
+  },
+  "pc": {
+    "symptom": "Heartburn",
+    "duration": "4 months",
+    "one_liner": "I've had this burning feeling in my chest for months now."
+  },
+  "hpc": {
+    "site": "Retrosternal",
+    "onset": "Gradual onset over weeks",
+    "character": "Burning discomfort with sour regurgitation",
+    "radiation": "Up to throat",
+    "associated": ["No dysphagia", "Occasional nocturnal cough", "No vomiting"],
+    "timing": "Worse in evenings and after meals",
+    "exacerbating": "Large meals, late eating, lying flat",
+    "relieving": "Antacids, sitting upright",
+    "severity_1_to_10": 6,
+    "relevant_negatives": ["No weight loss", "No hematemesis", "No melena"]
+  },
+  "pmh": { "conditions": ["Asthma"], "deny": ["Diabetes", "Hypertension"], "surgeries": [], "hospitalisations": [], "trauma": [] },
+  "dh": { "current": ["Salbutamol inhaler prn", "Chewable antacid tablets"], "recent_changes": "Started antacids 3 weeks ago", "otc": ["Antacid chews"], "herbal": [] },
+  "allergies": [ { "substance": "Penicillin", "reaction": "Rash" } ],
+  "fh": { "father": "Hypertension", "mother": "Hay fever", "siblings": "Healthy" },
+  "sh": {
+    "smoking": "Never smoker",
+    "alcohol": "1-2 units on weekends",
+    "recreational_drugs": "None",
+    "living": "Lives with spouse",
+    "exercise": "Jog once a week",
+    "diet": "High in spicy takeaway dinners",
+    "occupation_detail": "Sedentary office job"
+  },
+  "ros": {
+    "general": ["No fevers", "No night sweats"],
+    "cardio": ["No chest tightness on exertion"],
+    "resp": ["Occasional nocturnal cough"],
+    "gi": ["No vomiting", "No dysphagia", "No GI bleeding"],
+    "neuro": ["No headaches"]
+  },
+  "ice": { "ideas": "Thinks it's just heartburn", "concerns": "Worried it might turn into something serious", "expectations": "Hopes for stronger medicine or advice" },
+  "examiner_guidance": {
+    "most_likely_diagnosis": "Gastroesophageal reflux disease",
+    "differentials": ["Peptic ulcer disease", "Functional dyspepsia"],
+    "immediate_investigations": ["Trial of proton pump inhibitor", "Consider H. pylori testing"]
+  },
+  "marking": {
+    "sections": [
+      { "id": 1, "title": "Introduction & rapport", "max_marks": 8, "weight": 0.1 },
+      { "id": 2, "title": "Presenting complaint & HPC", "max_marks": 24, "weight": 0.35 },
+      { "id": 3, "title": "Background history", "max_marks": 18, "weight": 0.25 },
+      { "id": 4, "title": "Focused examination", "max_marks": 10, "weight": 0.1 },
+      { "id": 5, "title": "Initial investigations & plan", "max_marks": 10, "weight": 0.1 },
+      { "id": 6, "title": "Risk assessment & closure", "max_marks": 6, "weight": 0.05 },
+      { "id": 7, "title": "Communication skills", "max_marks": 4, "weight": 0.05 }
+    ],
+    "total_marks": 80,
+    "pass_mark": 56,
+    "bands": { "Excellent": "70-80", "Good": "60-69", "Borderline": "56-59", "Fail": "<56" }
+  },
+  "disclosure_rules": {
+    "ladder": ["pc_one_line", "hpc_details_if_asked", "background_if_asked"],
+    "never_volunteer_lists": ["associated", "ros"],
+    "deny_vitals": true,
+    "style": { "avg_words_per_turn": [6, 14], "tone": "layperson", "nonverbal_cues": [] }
+  },
+  "rubric_map": {
+    "introduction": ["introduce_self", "confirm_identity", "gain_consent"],
+    "pc": ["nature_of_pain", "duration", "impact_on_function"],
+    "hpc": ["site", "onset", "character", "radiation", "associated", "timing", "exacerbating", "relieving", "severity", "red_flags"],
+    "background": ["pmh", "dh", "allergies", "fh", "sh"],
+    "exam": ["explain_exam", "cardio_exam", "resp_exam", "vitals"],
+    "plan": ["initial_investigations", "initial_management", "risk_discussion"],
+    "ros": ["cardio_screen", "resp_screen", "gi_screen"],
+    "ice": ["ideas", "concerns", "expectations"],
+    "closure": ["summarise", "safety_net", "check_questions"],
+    "communication": ["empathy", "active_listening", "plain_language"]
+  }
+}
