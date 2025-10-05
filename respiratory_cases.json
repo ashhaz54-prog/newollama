@@ -1,0 +1,1400 @@
+[
+  {
+    "schemaVersion": "v2",
+    "id": "case_201",
+    "meta": {
+      "title": "Acute Asthma Exacerbation in a Young Adult",
+      "station_type": "history_taking",
+      "time_limit_sec": 900,
+      "candidate_brief": "You are the junior doctor in the emergency department. Take a focused history from this patient who has presented with shortness of breath.",
+      "difficulty": "beginner",
+      "specialty": "respiratory",
+      "tags": ["asthma", "acute"],
+      "patient_script": {
+        "opening_statement": "Doctor, I'm really wheezy and can't seem to catch my breath.",
+        "if_asked": {
+          "symptom_details": "It feels tight across my chest and I keep wheezing whenever I breathe out.",
+          "timing": "Started gradually over the last two days after a cold, worse today.",
+          "after_effects": "I feel exhausted and light-headed after each coughing fit.",
+          "exacerbating": "Cold air and walking make it worse.",
+          "relieving": "My blue inhaler helps a bit for a few minutes.",
+          "associated_symptoms": "Dry cough, no fever, no chest pain, no leg swelling.",
+          "past_medical_history": "I've had asthma since I was a teenager.",
+          "medications": "I use a brown preventer inhaler twice a day and the blue one when needed.",
+          "allergies": "I'm allergic to dust mites—they make me sneeze.",
+          "family_history": "My mum also has asthma.",
+          "social_history": "I don't smoke or drink much, live with my partner, work as a graphic designer.",
+          "functional_status": "I had to leave work early yesterday because I couldn't climb the stairs without stopping."
+        },
+        "collateral": {
+          "observer_note": "Partner noticed the patient is speaking in short sentences and using inhaler frequently."
+        },
+        "emotional_tone": "Anxious, slightly breathless with audible wheeze, sits leaning forward.",
+        "do_not_volunteer": [
+          "Do not reveal diagnosis of asthma exacerbation",
+          "Do not list peak flow reading",
+          "Do not state the management plan"
+        ]
+      }
+    },
+    "patient": {
+      "name": "Sophie Turner",
+      "age": 26,
+      "sex": "Female",
+      "occupation": "Graphic designer",
+      "setting": "Emergency department",
+      "baseline_mood": "Anxious",
+      "baseline_body_language": "Leaning forward, clutching inhaler",
+      "baseline_voice": "Breathy with intermittent wheeze"
+    },
+    "pc": {
+      "symptom": "Shortness of breath",
+      "duration": "2 days",
+      "one_liner": "I've been getting more and more short of breath and wheezy."
+    },
+    "hpc": {
+      "site": "Chest",
+      "onset": "Gradual over 48 hours",
+      "character": "Tightness with expiratory wheeze",
+      "radiation": "None",
+      "associated": ["Dry cough", "Mild sputum", "No fever", "No chest pain"],
+      "timing": "Worse at night and early morning",
+      "exacerbating": "Cold air, exertion",
+      "relieving": "Salbutamol inhaler, sitting upright",
+      "severity_1_to_10": 7,
+      "relevant_negatives": ["No hemoptysis", "No ankle swelling", "No recent travel"]
+    },
+    "pmh": {
+      "conditions": ["Asthma"],
+      "deny": ["Diabetes", "Hypertension"],
+      "surgeries": [],
+      "hospitalisations": ["Asthma admission aged 18"],
+      "trauma": []
+    },
+    "dh": {
+      "current": ["Beclomethasone 100 mcg twice daily", "Salbutamol inhaler PRN"],
+      "recent_changes": "Missed preventer inhaler doses over the weekend",
+      "otc": ["Occasional paracetamol"],
+      "herbal": []
+    },
+    "allergies": [
+      {"substance": "Dust mites", "reaction": "Sneezing and itchy eyes"}
+    ],
+    "fh": {"father": "Healthy", "mother": "Asthma", "siblings": "Younger brother healthy"},
+    "sh": {
+      "smoking": "Never smoker",
+      "alcohol": "Socially once a week",
+      "recreational_drugs": "None",
+      "living": "Lives with partner in flat",
+      "exercise": "Yoga twice weekly when well",
+      "diet": "Balanced",
+      "occupation_detail": "Desk-based job with occasional overtime"
+    },
+    "ros": {
+      "general": ["No weight loss", "No night sweats"],
+      "cardio": ["No chest pain", "No palpitations"],
+      "resp": ["Wheeze", "Shortness of breath", "Dry cough"],
+      "gi": ["No reflux"],
+      "neuro": ["Occasional light-headedness when coughing"]
+    },
+    "ice": {
+      "ideas": "Thinks it's her asthma playing up",
+      "concerns": "Worried it might get so bad she can't breathe",
+      "expectations": "Hopes for something stronger than her inhaler"
+    },
+    "examiner_guidance": {
+      "most_likely_diagnosis": "Acute asthma exacerbation triggered by viral upper respiratory infection",
+      "differentials": ["Viral bronchitis", "Pneumonia", "Anxiety-induced dyspnea"],
+      "immediate_investigations": ["Peak expiratory flow", "Oxygen saturation", "Arterial blood gas if severe", "Chest X-ray if atypical"]
+    },
+    "marking": {
+      "sections": [
+        {"id": 1, "title": "Introduction & rapport", "max_marks": 8, "weight": 0.1},
+        {"id": 2, "title": "Presenting complaint & HPC", "max_marks": 24, "weight": 0.35},
+        {"id": 3, "title": "Background history", "max_marks": 18, "weight": 0.25},
+        {"id": 4, "title": "Focused examination", "max_marks": 10, "weight": 0.1},
+        {"id": 5, "title": "Initial investigations & plan", "max_marks": 10, "weight": 0.1},
+        {"id": 6, "title": "Risk assessment & closure", "max_marks": 6, "weight": 0.05},
+        {"id": 7, "title": "Communication skills", "max_marks": 4, "weight": 0.05}
+      ],
+      "total_marks": 80,
+      "pass_mark": 56,
+      "bands": {"Excellent": "70-80", "Good": "60-69", "Borderline": "56-59", "Fail": "<56"}
+    },
+    "disclosure_rules": {
+      "ladder": ["pc_one_line", "hpc_details_if_asked", "background_if_asked"],
+      "never_volunteer_lists": ["associated", "ros"],
+      "deny_vitals": true,
+      "style": {"avg_words_per_turn": [6, 14], "tone": "layperson", "nonverbal_cues": ["Leaning forward", "Fidgeting"]}
+    },
+    "rubric_map": {
+      "introduction": ["introduce_self", "confirm_identity", "gain_consent"],
+      "pc": ["nature_of_pain", "duration", "impact_on_function"],
+      "hpc": ["site", "onset", "character", "radiation", "associated", "timing", "exacerbating", "relieving", "severity", "red_flags"],
+      "background": ["pmh", "dh", "allergies", "fh", "sh"],
+      "exam": ["explain_exam", "cardio_exam", "resp_exam", "vitals"],
+      "plan": ["initial_investigations", "initial_management", "risk_discussion"],
+      "ros": ["cardio_screen", "resp_screen", "gi_screen"],
+      "ice": ["ideas", "concerns", "expectations"],
+      "closure": ["summarise", "safety_net", "check_questions"],
+      "communication": ["empathy", "active_listening", "plain_language"]
+    }
+  },
+  {
+    "schemaVersion": "v2",
+    "id": "case_202",
+    "meta": {
+      "title": "First Presentation of COPD Exacerbation",
+      "station_type": "history_taking",
+      "time_limit_sec": 900,
+      "candidate_brief": "You are working in the acute medical unit. Take a history from this patient who has become increasingly breathless.",
+      "difficulty": "intermediate",
+      "specialty": "respiratory",
+      "tags": ["COPD", "smoker"],
+      "patient_script": {
+        "opening_statement": "I've been getting more and more breathless for a week now.",
+        "if_asked": {
+          "symptom_details": "I get short of breath even when walking to the bathroom.",
+          "timing": "Started after a chesty cold last week, worsening daily.",
+          "after_effects": "I feel wiped out after any effort.",
+          "exacerbating": "Climbing stairs and cigarette smoke make it worse.",
+          "relieving": "Resting helps a little.",
+          "associated_symptoms": "Productive cough with green sputum, no chest pain, low-grade fevers in evenings.",
+          "past_medical_history": "Told I had chronic bronchitis years ago, but no regular follow-up.",
+          "medications": "Only take paracetamol when needed, no inhalers.",
+          "allergies": "None that I know of.",
+          "family_history": "Dad died of lung cancer, mum had heart failure.",
+          "social_history": "I smoke about 20 cigarettes a day, have done for 40 years. Drink a pint most nights. Live alone in a council flat. Retired builder.",
+          "functional_status": "Can barely manage house chores; had to stop grocery shopping yesterday."
+        },
+        "collateral": {
+          "observer_note": "Neighbour reports patient has been coughing all night and looks blue around the lips in the morning."
+        },
+        "emotional_tone": "Tired, slightly irritable, breathes through pursed lips.",
+        "do_not_volunteer": [
+          "Do not label condition as COPD unless asked",
+          "Do not mention oxygen saturation",
+          "Do not discuss planned antibiotics"
+        ]
+      }
+    },
+    "patient": {
+      "name": "George Miller",
+      "age": 68,
+      "sex": "Male",
+      "occupation": "Retired builder",
+      "setting": "Acute medical unit",
+      "baseline_mood": "Weary",
+      "baseline_body_language": "Slumped posture, frequent coughing",
+      "baseline_voice": "Hoarse with intermittent cough"
+    },
+    "pc": {
+      "symptom": "Breathlessness",
+      "duration": "7 days",
+      "one_liner": "I'm so breathless I can hardly get around the flat."
+    },
+    "hpc": {
+      "site": "Diffuse chest",
+      "onset": "Subacute over a week",
+      "character": "Progressive shortness of breath with productive cough",
+      "radiation": "None",
+      "associated": ["Green sputum", "Low-grade fever", "No chest pain"],
+      "timing": "Constant, worse in mornings",
+      "exacerbating": "Exertion, cold air, smoke",
+      "relieving": "Rest",
+      "severity_1_to_10": 6,
+      "relevant_negatives": ["No hemoptysis", "No calf pain", "No recent travel"]
+    },
+    "pmh": {
+      "conditions": ["Chronic bronchitis"],
+      "deny": ["Asthma", "Diabetes"],
+      "surgeries": ["Inguinal hernia repair at 45"],
+      "hospitalisations": ["Admitted for pneumonia 5 years ago"],
+      "trauma": []
+    },
+    "dh": {
+      "current": ["Paracetamol PRN"],
+      "recent_changes": "None",
+      "otc": ["Occasional cough syrup"],
+      "herbal": []
+    },
+    "allergies": [],
+    "fh": {"father": "Lung cancer at 70", "mother": "Heart failure", "siblings": "One brother with COPD"},
+    "sh": {
+      "smoking": "40 pack-year history, currently 20/day",
+      "alcohol": "1 pint of beer nightly",
+      "recreational_drugs": "None",
+      "living": "Lives alone",
+      "exercise": "Minimal, breathless on exertion",
+      "diet": "High in ready meals",
+      "occupation_detail": "Retired due to breathlessness"
+    },
+    "ros": {
+      "general": ["Low-grade fever", "Fatigue"],
+      "cardio": ["No chest pain", "No palpitations"],
+      "resp": ["Productive cough", "Wheeze", "Shortness of breath"],
+      "gi": ["Poor appetite"],
+      "neuro": ["No syncope"]
+    },
+    "ice": {
+      "ideas": "Thinks it's just a bad chest infection",
+      "concerns": "Worried about becoming dependent on oxygen",
+      "expectations": "Hopes for tablets or inhalers to help breathing"
+    },
+    "examiner_guidance": {
+      "most_likely_diagnosis": "Acute exacerbation of chronic obstructive pulmonary disease",
+      "differentials": ["Community-acquired pneumonia", "Heart failure exacerbation", "Pulmonary embolism"],
+      "immediate_investigations": ["Arterial blood gas", "Chest X-ray", "Full blood count", "CRP", "Sputum culture", "ECG"]
+    },
+    "marking": {
+      "sections": [
+        {"id": 1, "title": "Introduction & rapport", "max_marks": 8, "weight": 0.1},
+        {"id": 2, "title": "Presenting complaint & HPC", "max_marks": 24, "weight": 0.35},
+        {"id": 3, "title": "Background history", "max_marks": 18, "weight": 0.25},
+        {"id": 4, "title": "Focused examination", "max_marks": 10, "weight": 0.1},
+        {"id": 5, "title": "Initial investigations & plan", "max_marks": 10, "weight": 0.1},
+        {"id": 6, "title": "Risk assessment & closure", "max_marks": 6, "weight": 0.05},
+        {"id": 7, "title": "Communication skills", "max_marks": 4, "weight": 0.05}
+      ],
+      "total_marks": 80,
+      "pass_mark": 56,
+      "bands": {"Excellent": "70-80", "Good": "60-69", "Borderline": "56-59", "Fail": "<56"}
+    },
+    "disclosure_rules": {
+      "ladder": ["pc_one_line", "hpc_details_if_asked", "background_if_asked"],
+      "never_volunteer_lists": ["associated", "ros"],
+      "deny_vitals": true,
+      "style": {"avg_words_per_turn": [7, 15], "tone": "layperson", "nonverbal_cues": ["Pursed lip breathing", "Intermittent cough"]}
+    },
+    "rubric_map": {
+      "introduction": ["introduce_self", "confirm_identity", "gain_consent"],
+      "pc": ["nature_of_pain", "duration", "impact_on_function"],
+      "hpc": ["site", "onset", "character", "radiation", "associated", "timing", "exacerbating", "relieving", "severity", "red_flags"],
+      "background": ["pmh", "dh", "allergies", "fh", "sh"],
+      "exam": ["explain_exam", "cardio_exam", "resp_exam", "vitals"],
+      "plan": ["initial_investigations", "initial_management", "risk_discussion"],
+      "ros": ["cardio_screen", "resp_screen", "gi_screen"],
+      "ice": ["ideas", "concerns", "expectations"],
+      "closure": ["summarise", "safety_net", "check_questions"],
+      "communication": ["empathy", "active_listening", "plain_language"]
+    }
+  },
+  {
+    "schemaVersion": "v2",
+    "id": "case_203",
+    "meta": {
+      "title": "Community-Acquired Pneumonia in a Nursing Student",
+      "station_type": "history_taking",
+      "time_limit_sec": 900,
+      "candidate_brief": "In the general practice walk-in clinic, take a history from this patient complaining of cough and fever.",
+      "difficulty": "beginner",
+      "specialty": "respiratory",
+      "tags": ["pneumonia", "infection"],
+      "patient_script": {
+        "opening_statement": "I can't shake off this cough and now I'm feeling feverish.",
+        "if_asked": {
+          "symptom_details": "It's a deep, chesty cough bringing up yellow gunk.",
+          "timing": "Started 5 days ago, fevers in the last 2 days.",
+          "after_effects": "Sweaty and exhausted after coughing fits.",
+          "exacerbating": "Lying flat makes it worse.",
+          "relieving": "Sitting upright and sipping warm tea helps.",
+          "associated_symptoms": "Fever, shivers, pleuritic chest pain on the right side, no hemoptysis, no vomiting.",
+          "past_medical_history": "Generally healthy, had mild asthma as a child.",
+          "medications": "Only take the pill and occasional ibuprofen.",
+          "allergies": "No known drug allergies.",
+          "family_history": "Parents healthy.",
+          "social_history": "Don't smoke, drink socially, live with roommates, currently on hospital placement.",
+          "functional_status": "Missed shifts at placement and can't manage lectures due to fatigue."
+        },
+        "collateral": {
+          "observer_note": "Housemate notes she has been shivering and coughing throughout the night."
+        },
+        "emotional_tone": "Feverish and tired but cooperative, speaks between coughs.",
+        "do_not_volunteer": [
+          "Do not name pneumonia without prompting",
+          "Do not mention CRP results",
+          "Do not outline antibiotic plan"
+        ]
+      }
+    },
+    "patient": {
+      "name": "Amelia Johnson",
+      "age": 22,
+      "sex": "Female",
+      "occupation": "Nursing student",
+      "setting": "General practice walk-in",
+      "baseline_mood": "Fatigued",
+      "baseline_body_language": "Hunched, clutching tissues",
+      "baseline_voice": "Hoarse with intermittent cough"
+    },
+    "pc": {
+      "symptom": "Cough and fever",
+      "duration": "5 days",
+      "one_liner": "This cough won't go away and now I've got a fever and chest pain when I breathe in."
+    },
+    "hpc": {
+      "site": "Right lower chest",
+      "onset": "Acute over a few days",
+      "character": "Productive cough with pleuritic chest pain",
+      "radiation": "Pain stays in right side",
+      "associated": ["Fever", "Rigors", "Shortness of breath on exertion"],
+      "timing": "Worse at night",
+      "exacerbating": "Deep breaths, lying flat",
+      "relieving": "Sitting up",
+      "severity_1_to_10": 6,
+      "relevant_negatives": ["No hemoptysis", "No recent travel", "No TB contacts"]
+    },
+    "pmh": {
+      "conditions": ["Childhood asthma (resolved)"],
+      "deny": ["Diabetes", "Cardiac disease"],
+      "surgeries": [],
+      "hospitalisations": [],
+      "trauma": []
+    },
+    "dh": {
+      "current": ["Combined oral contraceptive pill"],
+      "recent_changes": "None",
+      "otc": ["Ibuprofen for fever"],
+      "herbal": []
+    },
+    "allergies": [],
+    "fh": {"father": "Healthy", "mother": "Healthy", "siblings": "One younger brother healthy"},
+    "sh": {
+      "smoking": "Never",
+      "alcohol": "Social drinking twice monthly",
+      "recreational_drugs": "None",
+      "living": "Shared flat with students",
+      "exercise": "Runs twice weekly when well",
+      "diet": "Balanced",
+      "occupation_detail": "On surgical ward placement"
+    },
+    "ros": {
+      "general": ["Fever", "Night sweats", "Fatigue"],
+      "cardio": ["No palpitations"],
+      "resp": ["Productive cough", "Pleuritic pain", "Shortness of breath"],
+      "gi": ["Reduced appetite"],
+      "neuro": ["No headaches"]
+    },
+    "ice": {
+      "ideas": "Thinks she has a chest infection",
+      "concerns": "Worried about missing placement assessments",
+      "expectations": "Hopes for antibiotics and advice"
+    },
+    "examiner_guidance": {
+      "most_likely_diagnosis": "Community-acquired pneumonia",
+      "differentials": ["Viral bronchitis", "Pulmonary embolism", "Pleurisy"],
+      "immediate_investigations": ["Observations including oxygen saturation", "Chest X-ray", "Full blood count", "CRP", "Sputum culture if possible"]
+    },
+    "marking": {
+      "sections": [
+        {"id": 1, "title": "Introduction & rapport", "max_marks": 8, "weight": 0.1},
+        {"id": 2, "title": "Presenting complaint & HPC", "max_marks": 24, "weight": 0.35},
+        {"id": 3, "title": "Background history", "max_marks": 18, "weight": 0.25},
+        {"id": 4, "title": "Focused examination", "max_marks": 10, "weight": 0.1},
+        {"id": 5, "title": "Initial investigations & plan", "max_marks": 10, "weight": 0.1},
+        {"id": 6, "title": "Risk assessment & closure", "max_marks": 6, "weight": 0.05},
+        {"id": 7, "title": "Communication skills", "max_marks": 4, "weight": 0.05}
+      ],
+      "total_marks": 80,
+      "pass_mark": 56,
+      "bands": {"Excellent": "70-80", "Good": "60-69", "Borderline": "56-59", "Fail": "<56"}
+    },
+    "disclosure_rules": {
+      "ladder": ["pc_one_line", "hpc_details_if_asked", "background_if_asked"],
+      "never_volunteer_lists": ["associated", "ros"],
+      "deny_vitals": true,
+      "style": {"avg_words_per_turn": [8, 16], "tone": "layperson", "nonverbal_cues": ["Frequent cough", "Wipes sweat from brow"]}
+    },
+    "rubric_map": {
+      "introduction": ["introduce_self", "confirm_identity", "gain_consent"],
+      "pc": ["nature_of_pain", "duration", "impact_on_function"],
+      "hpc": ["site", "onset", "character", "radiation", "associated", "timing", "exacerbating", "relieving", "severity", "red_flags"],
+      "background": ["pmh", "dh", "allergies", "fh", "sh"],
+      "exam": ["explain_exam", "cardio_exam", "resp_exam", "vitals"],
+      "plan": ["initial_investigations", "initial_management", "risk_discussion"],
+      "ros": ["cardio_screen", "resp_screen", "gi_screen"],
+      "ice": ["ideas", "concerns", "expectations"],
+      "closure": ["summarise", "safety_net", "check_questions"],
+      "communication": ["empathy", "active_listening", "plain_language"]
+    }
+  },
+  {
+    "schemaVersion": "v2",
+    "id": "case_204",
+    "meta": {
+      "title": "Pulmonary Embolism After Long-Haul Flight",
+      "station_type": "history_taking",
+      "time_limit_sec": 900,
+      "candidate_brief": "You are in the emergency department. Take a history from this patient with sudden breathlessness after travel.",
+      "difficulty": "advanced",
+      "specialty": "respiratory",
+      "tags": ["PE", "travel"],
+      "patient_script": {
+        "opening_statement": "I suddenly felt really short of breath after getting off the plane yesterday.",
+        "if_asked": {
+          "symptom_details": "It's like I can't get enough air and my heart races.",
+          "timing": "Started abruptly yesterday evening, persistent since.",
+          "after_effects": "I feel dizzy if I try to walk quickly.",
+          "exacerbating": "Walking upstairs makes it worse.",
+          "relieving": "Sitting still helps a bit.",
+          "associated_symptoms": "Right calf has been sore and slightly swollen, slight pleuritic chest pain, no cough or fever.",
+          "past_medical_history": "Took the pill for years, no other illnesses.",
+          "medications": "Combined oral contraceptive pill, occasional ibuprofen.",
+          "allergies": "Allergic to penicillin—get a rash.",
+          "family_history": "Sister had a DVT after pregnancy.",
+          "social_history": "Non-smoker, drinks socially, works as an event planner, flew back from Australia yesterday, sat in economy, minimal movement.",
+          "functional_status": "Usually runs 5km but now gets breathless walking to bathroom."
+        },
+        "collateral": {
+          "observer_note": "Friend noticed she was clutching chest and breathing fast on the way from airport."
+        },
+        "emotional_tone": "Anxious, tachypneic, frequently rubs calf.",
+        "do_not_volunteer": [
+          "Do not say 'pulmonary embolism' unless asked",
+          "Do not give D-dimer result",
+          "Do not discuss anticoagulation plan"
+        ]
+      }
+    },
+    "patient": {
+      "name": "Hannah Lee",
+      "age": 31,
+      "sex": "Female",
+      "occupation": "Event planner",
+      "setting": "Emergency department",
+      "baseline_mood": "Anxious",
+      "baseline_body_language": "Fidgeting, rubbing right calf",
+      "baseline_voice": "Breathless, speaking quickly"
+    },
+    "pc": {
+      "symptom": "Sudden shortness of breath",
+      "duration": "1 day",
+      "one_liner": "I can't catch my breath since getting off a long flight."
+    },
+    "hpc": {
+      "site": "Chest",
+      "onset": "Sudden",
+      "character": "Sharp pleuritic pain with dyspnea",
+      "radiation": "None",
+      "associated": ["Right calf pain", "Mild swelling", "Tachycardia"],
+      "timing": "Persistent, worse with exertion",
+      "exacerbating": "Walking, deep breaths",
+      "relieving": "Rest",
+      "severity_1_to_10": 8,
+      "relevant_negatives": ["No hemoptysis", "No fever", "No recent surgery"]
+    },
+    "pmh": {
+      "conditions": ["Migraines"],
+      "deny": ["Asthma", "Heart disease"],
+      "surgeries": [],
+      "hospitalisations": [],
+      "trauma": []
+    },
+    "dh": {
+      "current": ["Combined oral contraceptive pill", "Sumatriptan PRN"],
+      "recent_changes": "None",
+      "otc": ["Ibuprofen occasionally"],
+      "herbal": []
+    },
+    "allergies": [
+      {"substance": "Penicillin", "reaction": "Rash"}
+    ],
+    "fh": {"father": "Hypertension", "mother": "Hypothyroidism", "siblings": "Sister had DVT postpartum"},
+    "sh": {
+      "smoking": "Never",
+      "alcohol": "2-3 glasses wine/week",
+      "recreational_drugs": "None",
+      "living": "Lives with partner",
+      "exercise": "Runs regularly",
+      "diet": "Balanced",
+      "occupation_detail": "Frequent long-haul travel for work"
+    },
+    "ros": {
+      "general": ["No weight loss"],
+      "cardio": ["Palpitations", "No syncope"],
+      "resp": ["Shortness of breath", "Pleuritic chest pain"],
+      "gi": ["No nausea"],
+      "neuro": ["No weakness"]
+    },
+    "ice": {
+      "ideas": "Worried about a blood clot because of the calf pain",
+      "concerns": "Scared it could be something life-threatening",
+      "expectations": "Wants a scan to check for clots"
+    },
+    "examiner_guidance": {
+      "most_likely_diagnosis": "Pulmonary embolism likely provoked by long-haul flight and OCP",
+      "differentials": ["Pneumothorax", "Pleurisy", "Anxiety attack"],
+      "immediate_investigations": ["Oxygen saturation", "D-dimer", "CT pulmonary angiogram", "ECG", "Full blood count"]
+    },
+    "marking": {
+      "sections": [
+        {"id": 1, "title": "Introduction & rapport", "max_marks": 8, "weight": 0.1},
+        {"id": 2, "title": "Presenting complaint & HPC", "max_marks": 24, "weight": 0.35},
+        {"id": 3, "title": "Background history", "max_marks": 18, "weight": 0.25},
+        {"id": 4, "title": "Focused examination", "max_marks": 10, "weight": 0.1},
+        {"id": 5, "title": "Initial investigations & plan", "max_marks": 10, "weight": 0.1},
+        {"id": 6, "title": "Risk assessment & closure", "max_marks": 6, "weight": 0.05},
+        {"id": 7, "title": "Communication skills", "max_marks": 4, "weight": 0.05}
+      ],
+      "total_marks": 80,
+      "pass_mark": 56,
+      "bands": {"Excellent": "70-80", "Good": "60-69", "Borderline": "56-59", "Fail": "<56"}
+    },
+    "disclosure_rules": {
+      "ladder": ["pc_one_line", "hpc_details_if_asked", "background_if_asked"],
+      "never_volunteer_lists": ["associated", "ros"],
+      "deny_vitals": true,
+      "style": {"avg_words_per_turn": [6, 12], "tone": "layperson", "nonverbal_cues": ["Rapid shallow breathing", "Clutches chest"]}
+    },
+    "rubric_map": {
+      "introduction": ["introduce_self", "confirm_identity", "gain_consent"],
+      "pc": ["nature_of_pain", "duration", "impact_on_function"],
+      "hpc": ["site", "onset", "character", "radiation", "associated", "timing", "exacerbating", "relieving", "severity", "red_flags"],
+      "background": ["pmh", "dh", "allergies", "fh", "sh"],
+      "exam": ["explain_exam", "cardio_exam", "resp_exam", "vitals"],
+      "plan": ["initial_investigations", "initial_management", "risk_discussion"],
+      "ros": ["cardio_screen", "resp_screen", "gi_screen"],
+      "ice": ["ideas", "concerns", "expectations"],
+      "closure": ["summarise", "safety_net", "check_questions"],
+      "communication": ["empathy", "active_listening", "plain_language"]
+    }
+  },
+  {
+    "schemaVersion": "v2",
+    "id": "case_205",
+    "meta": {
+      "title": "Spontaneous Pneumothorax in a Tall Smoker",
+      "station_type": "history_taking",
+      "time_limit_sec": 900,
+      "candidate_brief": "You are working in the emergency department minors area. Take a history from this patient with sudden chest pain.",
+      "difficulty": "intermediate",
+      "specialty": "respiratory",
+      "tags": ["pneumothorax", "acute"],
+      "patient_script": {
+        "opening_statement": "I got this sharp pain on the left side and now I'm breathless.",
+        "if_asked": {
+          "symptom_details": "Feels like stabbing when I breathe in deep.",
+          "timing": "Started suddenly this morning while stretching after waking up.",
+          "after_effects": "Feel light-headed if I stand quickly.",
+          "exacerbating": "Deep breaths and coughing.",
+          "relieving": "Shallow breathing and lying still.",
+          "associated_symptoms": "Mild dry cough, no fever, no leg swelling.",
+          "past_medical_history": "No long-term illnesses, had bronchitis once.",
+          "medications": "None regularly.",
+          "allergies": "Allergic to cats—get itchy eyes.",
+          "family_history": "Dad has high blood pressure, no lung problems.",
+          "social_history": "Smoke about 10 cigarettes a day for 8 years, occasional cannabis, work as a barista, live with friends.",
+          "functional_status": "Usually play basketball but couldn't today."
+        },
+        "collateral": {
+          "observer_note": "Friend saw him suddenly clutch chest during stretch and become breathless."
+        },
+        "emotional_tone": "Alert but anxious, avoids deep breaths.",
+        "do_not_volunteer": [
+          "Do not state pneumothorax diagnosis",
+          "Do not mention chest X-ray findings",
+          "Do not discuss needle aspiration"
+        ]
+      }
+    },
+    "patient": {
+      "name": "Liam Carter",
+      "age": 24,
+      "sex": "Male",
+      "occupation": "Barista",
+      "setting": "Emergency department",
+      "baseline_mood": "Anxious",
+      "baseline_body_language": "Holding left chest, shallow breaths",
+      "baseline_voice": "Soft, guarded"
+    },
+    "pc": {
+      "symptom": "Left-sided chest pain",
+      "duration": "6 hours",
+      "one_liner": "I woke up, stretched, and suddenly got this sharp pain and shortness of breath."
+    },
+    "hpc": {
+      "site": "Left hemithorax",
+      "onset": "Sudden",
+      "character": "Sharp pleuritic pain",
+      "radiation": "To left shoulder tip",
+      "associated": ["Shortness of breath", "No cough with sputum"],
+      "timing": "Constant since onset",
+      "exacerbating": "Deep inspiration, coughing",
+      "relieving": "Shallow breathing",
+      "severity_1_to_10": 7,
+      "relevant_negatives": ["No trauma", "No fever", "No leg swelling"]
+    },
+    "pmh": {
+      "conditions": ["None"],
+      "deny": ["Asthma", "COPD"],
+      "surgeries": [],
+      "hospitalisations": [],
+      "trauma": []
+    },
+    "dh": {
+      "current": [],
+      "recent_changes": "None",
+      "otc": ["Took ibuprofen earlier"],
+      "herbal": []
+    },
+    "allergies": [
+      {"substance": "Cat dander", "reaction": "Itchy eyes"}
+    ],
+    "fh": {"father": "Hypertension", "mother": "Healthy", "siblings": "Sister with eczema"},
+    "sh": {
+      "smoking": "10 cigarettes/day for 8 years",
+      "alcohol": "Weekends, 6 units",
+      "recreational_drugs": "Occasional cannabis joints",
+      "living": "Shared apartment with friends",
+      "exercise": "Plays basketball twice weekly",
+      "diet": "Mixed",
+      "occupation_detail": "Works early morning shifts"
+    },
+    "ros": {
+      "general": ["No weight loss"],
+      "cardio": ["No palpitations", "No syncope"],
+      "resp": ["Sharp chest pain", "Shortness of breath"],
+      "gi": ["No nausea"],
+      "neuro": ["No weakness"]
+    },
+    "ice": {
+      "ideas": "Wonders if he pulled a muscle",
+      "concerns": "Worried lung might have collapsed",
+      "expectations": "Wants pain relief and to know if he can go home"
+    },
+    "examiner_guidance": {
+      "most_likely_diagnosis": "Primary spontaneous pneumothorax",
+      "differentials": ["Pleurisy", "Pulmonary embolism", "Musculoskeletal chest pain"],
+      "immediate_investigations": ["Chest X-ray", "Oxygen saturation", "Arterial blood gas if hypoxic"]
+    },
+    "marking": {
+      "sections": [
+        {"id": 1, "title": "Introduction & rapport", "max_marks": 8, "weight": 0.1},
+        {"id": 2, "title": "Presenting complaint & HPC", "max_marks": 24, "weight": 0.35},
+        {"id": 3, "title": "Background history", "max_marks": 18, "weight": 0.25},
+        {"id": 4, "title": "Focused examination", "max_marks": 10, "weight": 0.1},
+        {"id": 5, "title": "Initial investigations & plan", "max_marks": 10, "weight": 0.1},
+        {"id": 6, "title": "Risk assessment & closure", "max_marks": 6, "weight": 0.05},
+        {"id": 7, "title": "Communication skills", "max_marks": 4, "weight": 0.05}
+      ],
+      "total_marks": 80,
+      "pass_mark": 56,
+      "bands": {"Excellent": "70-80", "Good": "60-69", "Borderline": "56-59", "Fail": "<56"}
+    },
+    "disclosure_rules": {
+      "ladder": ["pc_one_line", "hpc_details_if_asked", "background_if_asked"],
+      "never_volunteer_lists": ["associated", "ros"],
+      "deny_vitals": true,
+      "style": {"avg_words_per_turn": [6, 12], "tone": "layperson", "nonverbal_cues": ["Guards left chest", "Avoids deep breaths"]}
+    },
+    "rubric_map": {
+      "introduction": ["introduce_self", "confirm_identity", "gain_consent"],
+      "pc": ["nature_of_pain", "duration", "impact_on_function"],
+      "hpc": ["site", "onset", "character", "radiation", "associated", "timing", "exacerbating", "relieving", "severity", "red_flags"],
+      "background": ["pmh", "dh", "allergies", "fh", "sh"],
+      "exam": ["explain_exam", "cardio_exam", "resp_exam", "vitals"],
+      "plan": ["initial_investigations", "initial_management", "risk_discussion"],
+      "ros": ["cardio_screen", "resp_screen", "gi_screen"],
+      "ice": ["ideas", "concerns", "expectations"],
+      "closure": ["summarise", "safety_net", "check_questions"],
+      "communication": ["empathy", "active_listening", "plain_language"]
+    }
+  },
+  {
+    "schemaVersion": "v2",
+    "id": "case_206",
+    "meta": {
+      "title": "Bronchiectasis Exacerbation in Cystic Fibrosis Carrier",
+      "station_type": "history_taking",
+      "time_limit_sec": 900,
+      "candidate_brief": "Take a focused history from this patient with a chronic productive cough who has become worse.",
+      "difficulty": "advanced",
+      "specialty": "respiratory",
+      "tags": ["bronchiectasis", "chronic"],
+      "patient_script": {
+        "opening_statement": "My cough has gotten thicker and smellier these past few days.",
+        "if_asked": {
+          "symptom_details": "I usually cough up some phlegm, but now it's a lot more and green.",
+          "timing": "Baseline daily cough, but worsened 4 days ago after a cold.",
+          "after_effects": "Feel drained after coughing fits.",
+          "exacerbating": "Cold mornings and lying flat.",
+          "relieving": "Physiotherapy postural drainage helps.",
+          "associated_symptoms": "Low-grade fevers, mild hemoptysis streaks, more breathless climbing stairs, no chest pain.",
+          "past_medical_history": "Diagnosed with bronchiectasis secondary to childhood infections, carrier for cystic fibrosis gene.",
+          "medications": "Azithromycin prophylaxis, nebulised hypertonic saline, salbutamol inhaler.",
+          "allergies": "Allergic to erythromycin—causes stomach cramps.",
+          "family_history": "Younger sister has cystic fibrosis.",
+          "social_history": "Non-smoker, occasional wine, work from home as translator, lives with wife.",
+          "functional_status": "Usually manage light exercise but now too breathless for daily walk."
+        },
+        "collateral": {
+          "observer_note": "Spouse notes increased coughing at night and foul-smelling sputum."
+        },
+        "emotional_tone": "Fatigued but stoic, brings sputum pot.",
+        "do_not_volunteer": [
+          "Do not state sputum culture results",
+          "Do not mention planned IV antibiotics",
+          "Do not disclose CT findings"
+        ]
+      }
+    },
+    "patient": {
+      "name": "Daniel Ruiz",
+      "age": 36,
+      "sex": "Male",
+      "occupation": "Freelance translator",
+      "setting": "Respiratory clinic",
+      "baseline_mood": "Tired",
+      "baseline_body_language": "Occasional productive cough into tissue",
+      "baseline_voice": "Hoarse between coughs"
+    },
+    "pc": {
+      "symptom": "Worsening productive cough",
+      "duration": "4 days of worsening",
+      "one_liner": "My usual cough is much worse and the sputum smells awful."
+    },
+    "hpc": {
+      "site": "Chest",
+      "onset": "Chronic baseline with acute deterioration",
+      "character": "Thick green sputum, occasional blood streaks",
+      "radiation": "None",
+      "associated": ["Low-grade fever", "Increased breathlessness", "Fatigue"],
+      "timing": "Persistent, worse mornings",
+      "exacerbating": "Cold weather, lying flat",
+      "relieving": "Physiotherapy, nebulisers",
+      "severity_1_to_10": 6,
+      "relevant_negatives": ["No chest pain", "No weight loss recently"]
+    },
+    "pmh": {
+      "conditions": ["Bronchiectasis", "CF gene carrier"],
+      "deny": ["Asthma", "Diabetes"],
+      "surgeries": ["Childhood tonsillectomy"],
+      "hospitalisations": ["Multiple admissions for IV antibiotics"],
+      "trauma": []
+    },
+    "dh": {
+      "current": ["Azithromycin 250 mg three times weekly", "Nebulised 7% saline twice daily", "Salbutamol inhaler PRN"],
+      "recent_changes": "Missed last physiotherapy session due to work deadline",
+      "otc": ["Vitamin D supplement"],
+      "herbal": []
+    },
+    "allergies": [
+      {"substance": "Erythromycin", "reaction": "Severe abdominal cramps"}
+    ],
+    "fh": {"father": "Type 2 diabetes", "mother": "Healthy", "siblings": "Sister with cystic fibrosis"},
+    "sh": {
+      "smoking": "Never",
+      "alcohol": "2 glasses wine/week",
+      "recreational_drugs": "None",
+      "living": "Lives with wife",
+      "exercise": "Light cycling and physiotherapy exercises",
+      "diet": "High-calorie balanced diet",
+      "occupation_detail": "Works from home, flexible hours"
+    },
+    "ros": {
+      "general": ["Fatigue", "Low-grade fever"],
+      "cardio": ["No chest pain"],
+      "resp": ["Increased sputum", "Hemoptysis streaks", "Breathlessness"],
+      "gi": ["Occasional reflux"],
+      "neuro": ["No headaches"]
+    },
+    "ice": {
+      "ideas": "Thinks he is having a flare of bronchiectasis",
+      "concerns": "Worried about needing hospital admission",
+      "expectations": "Wants advice on antibiotics and physiotherapy"
+    },
+    "examiner_guidance": {
+      "most_likely_diagnosis": "Bronchiectasis exacerbation",
+      "differentials": ["Pneumonia", "COPD exacerbation", "Tuberculosis"],
+      "immediate_investigations": ["Sputum culture", "Full blood count", "CRP", "Spirometry post-stabilisation", "Chest X-ray if new changes"]
+    },
+    "marking": {
+      "sections": [
+        {"id": 1, "title": "Introduction & rapport", "max_marks": 8, "weight": 0.1},
+        {"id": 2, "title": "Presenting complaint & HPC", "max_marks": 24, "weight": 0.35},
+        {"id": 3, "title": "Background history", "max_marks": 18, "weight": 0.25},
+        {"id": 4, "title": "Focused examination", "max_marks": 10, "weight": 0.1},
+        {"id": 5, "title": "Initial investigations & plan", "max_marks": 10, "weight": 0.1},
+        {"id": 6, "title": "Risk assessment & closure", "max_marks": 6, "weight": 0.05},
+        {"id": 7, "title": "Communication skills", "max_marks": 4, "weight": 0.05}
+      ],
+      "total_marks": 80,
+      "pass_mark": 56,
+      "bands": {"Excellent": "70-80", "Good": "60-69", "Borderline": "56-59", "Fail": "<56"}
+    },
+    "disclosure_rules": {
+      "ladder": ["pc_one_line", "hpc_details_if_asked", "background_if_asked"],
+      "never_volunteer_lists": ["associated", "ros"],
+      "deny_vitals": true,
+      "style": {"avg_words_per_turn": [8, 16], "tone": "layperson", "nonverbal_cues": ["Spits into tissue", "Leans forward when coughing"]}
+    },
+    "rubric_map": {
+      "introduction": ["introduce_self", "confirm_identity", "gain_consent"],
+      "pc": ["nature_of_pain", "duration", "impact_on_function"],
+      "hpc": ["site", "onset", "character", "radiation", "associated", "timing", "exacerbating", "relieving", "severity", "red_flags"],
+      "background": ["pmh", "dh", "allergies", "fh", "sh"],
+      "exam": ["explain_exam", "cardio_exam", "resp_exam", "vitals"],
+      "plan": ["initial_investigations", "initial_management", "risk_discussion"],
+      "ros": ["cardio_screen", "resp_screen", "gi_screen"],
+      "ice": ["ideas", "concerns", "expectations"],
+      "closure": ["summarise", "safety_net", "check_questions"],
+      "communication": ["empathy", "active_listening", "plain_language"]
+    }
+  },
+  {
+    "schemaVersion": "v2",
+    "id": "case_207",
+    "meta": {
+      "title": "Occupational Asthma in a Baker",
+      "station_type": "history_taking",
+      "time_limit_sec": 900,
+      "candidate_brief": "In the outpatient clinic, take a history from this patient whose breathing worsens at work.",
+      "difficulty": "intermediate",
+      "specialty": "respiratory",
+      "tags": ["occupational", "asthma"],
+      "patient_script": {
+        "opening_statement": "Whenever I'm at work I start wheezing and coughing.",
+        "if_asked": {
+          "symptom_details": "My chest feels tight and I wheeze especially during night shifts.",
+          "timing": "Symptoms started 6 months ago, worsen during workdays and improve on holidays.",
+          "after_effects": "Feel exhausted after night shifts due to poor sleep.",
+          "exacerbating": "Handling flour and cleaning bakery ovens.",
+          "relieving": "Going outside for fresh air, using inhaler.",
+          "associated_symptoms": "Runny nose, itchy eyes at work, no fever.",
+          "past_medical_history": "Seasonal allergies as a teenager, no asthma before.",
+          "medications": "Blue inhaler prescribed recently, antihistamine tablets.",
+          "allergies": "Hay fever, no drug allergies.",
+          "family_history": "Mother has eczema, father healthy.",
+          "social_history": "Never smoked, occasional wine, lives with wife and toddler, works as a baker with flour exposure.",
+          "functional_status": "Can play with child at weekends without issues when away from work."
+        },
+        "collateral": {
+          "observer_note": "Supervisor noticed frequent cough and recommended occupational health review."
+        },
+        "emotional_tone": "Concerned but composed, mild wheeze audible.",
+        "do_not_volunteer": [
+          "Do not mention spirometry results",
+          "Do not reveal peak flow diary data",
+          "Do not suggest specific treatment plan"
+        ]
+      }
+    },
+    "patient": {
+      "name": "Owen Baker",
+      "age": 34,
+      "sex": "Male",
+      "occupation": "Baker",
+      "setting": "Respiratory outpatient clinic",
+      "baseline_mood": "Concerned",
+      "baseline_body_language": "Occasional throat clearing, rubs nose",
+      "baseline_voice": "Slightly nasal"
+    },
+    "pc": {
+      "symptom": "Work-related wheeze",
+      "duration": "6 months",
+      "one_liner": "I only get wheezy when I'm at the bakery."
+    },
+    "hpc": {
+      "site": "Chest",
+      "onset": "Subacute onset over months",
+      "character": "Tight chest with expiratory wheeze",
+      "radiation": "None",
+      "associated": ["Rhinitis", "Itchy eyes"],
+      "timing": "Worse during shifts, better on days off",
+      "exacerbating": "Flour dust exposure",
+      "relieving": "Fresh air, inhaler",
+      "severity_1_to_10": 5,
+      "relevant_negatives": ["No nocturnal symptoms when off work", "No weight loss"]
+    },
+    "pmh": {
+      "conditions": ["Allergic rhinitis"],
+      "deny": ["Asthma in childhood"],
+      "surgeries": [],
+      "hospitalisations": [],
+      "trauma": []
+    },
+    "dh": {
+      "current": ["Salbutamol inhaler PRN", "Cetirizine 10 mg daily"],
+      "recent_changes": "Started inhaler 2 months ago",
+      "otc": [],
+      "herbal": []
+    },
+    "allergies": [],
+    "fh": {"father": "Healthy", "mother": "Eczema", "siblings": "Younger sister with hay fever"},
+    "sh": {
+      "smoking": "Never",
+      "alcohol": "1-2 glasses wine/week",
+      "recreational_drugs": "None",
+      "living": "Lives with wife and child",
+      "exercise": "Plays football weekly",
+      "diet": "High in carbs due to bakery snacks",
+      "occupation_detail": "Night shifts with significant flour exposure"
+    },
+    "ros": {
+      "general": ["No fevers"],
+      "cardio": ["No chest pain"],
+      "resp": ["Wheeze", "Tight chest", "Cough"],
+      "gi": ["No reflux"],
+      "neuro": ["No headaches"]
+    },
+    "ice": {
+      "ideas": "Thinks work might be causing asthma",
+      "concerns": "Worried about losing job if condition worsens",
+      "expectations": "Wants advice on managing symptoms and workplace adjustments"
+    },
+    "examiner_guidance": {
+      "most_likely_diagnosis": "Occupational asthma due to flour exposure",
+      "differentials": ["Allergic rhinitis with post-nasal drip", "Vocal cord dysfunction", "Gastroesophageal reflux"],
+      "immediate_investigations": ["Peak flow monitoring at work vs off", "Spirometry", "Allergy testing"]
+    },
+    "marking": {
+      "sections": [
+        {"id": 1, "title": "Introduction & rapport", "max_marks": 8, "weight": 0.1},
+        {"id": 2, "title": "Presenting complaint & HPC", "max_marks": 24, "weight": 0.35},
+        {"id": 3, "title": "Background history", "max_marks": 18, "weight": 0.25},
+        {"id": 4, "title": "Focused examination", "max_marks": 10, "weight": 0.1},
+        {"id": 5, "title": "Initial investigations & plan", "max_marks": 10, "weight": 0.1},
+        {"id": 6, "title": "Risk assessment & closure", "max_marks": 6, "weight": 0.05},
+        {"id": 7, "title": "Communication skills", "max_marks": 4, "weight": 0.05}
+      ],
+      "total_marks": 80,
+      "pass_mark": 56,
+      "bands": {"Excellent": "70-80", "Good": "60-69", "Borderline": "56-59", "Fail": "<56"}
+    },
+    "disclosure_rules": {
+      "ladder": ["pc_one_line", "hpc_details_if_asked", "background_if_asked"],
+      "never_volunteer_lists": ["associated", "ros"],
+      "deny_vitals": true,
+      "style": {"avg_words_per_turn": [7, 15], "tone": "layperson", "nonverbal_cues": ["Rubs nose", "Occasional wheeze"]}
+    },
+    "rubric_map": {
+      "introduction": ["introduce_self", "confirm_identity", "gain_consent"],
+      "pc": ["nature_of_pain", "duration", "impact_on_function"],
+      "hpc": ["site", "onset", "character", "radiation", "associated", "timing", "exacerbating", "relieving", "severity", "red_flags"],
+      "background": ["pmh", "dh", "allergies", "fh", "sh"],
+      "exam": ["explain_exam", "cardio_exam", "resp_exam", "vitals"],
+      "plan": ["initial_investigations", "initial_management", "risk_discussion"],
+      "ros": ["cardio_screen", "resp_screen", "gi_screen"],
+      "ice": ["ideas", "concerns", "expectations"],
+      "closure": ["summarise", "safety_net", "check_questions"],
+      "communication": ["empathy", "active_listening", "plain_language"]
+    }
+  },
+  {
+    "schemaVersion": "v2",
+    "id": "case_208",
+    "meta": {
+      "title": "Sarcoidosis Presenting with Dry Cough and Fatigue",
+      "station_type": "history_taking",
+      "time_limit_sec": 900,
+      "candidate_brief": "Take a detailed history from this patient presenting with chronic dry cough and systemic symptoms.",
+      "difficulty": "advanced",
+      "specialty": "respiratory",
+      "tags": ["sarcoidosis", "chronic"],
+      "patient_script": {
+        "opening_statement": "I've had this dry cough and feel exhausted all the time.",
+        "if_asked": {
+          "symptom_details": "It's a dry cough, no sputum, just constant tickle.",
+          "timing": "Going on for 3 months, fatigue worsening over last month.",
+          "after_effects": "Feel drained after work and nap every evening.",
+          "exacerbating": "Gets worse when I'm stressed at work.",
+          "relieving": "Sipping water helps temporarily.",
+          "associated_symptoms": "Shortness of breath on exertion, red painful bumps on shins a few weeks ago, occasional blurred vision, no weight loss.",
+          "past_medical_history": "Generally healthy, had uveitis episode last year treated with drops.",
+          "medications": "Multivitamin, occasional ibuprofen.",
+          "allergies": "None known.",
+          "family_history": "No lung disease, mother has rheumatoid arthritis.",
+          "social_history": "Non-smoker, minimal alcohol, works as a school teacher, recently moved house with some dust exposure.",
+          "functional_status": "Struggling to keep up with teaching duties, takes frequent breaks."
+        },
+        "collateral": {
+          "observer_note": "Partner notes loud snoring and increased daytime napping recently."
+        },
+        "emotional_tone": "Fatigued but cooperative, occasional dry cough.",
+        "do_not_volunteer": [
+          "Do not mention CT findings",
+          "Do not reveal ACE levels",
+          "Do not discuss steroid therapy"
+        ]
+      }
+    },
+    "patient": {
+      "name": "Priya Nair",
+      "age": 40,
+      "sex": "Female",
+      "occupation": "Primary school teacher",
+      "setting": "Respiratory outpatient clinic",
+      "baseline_mood": "Weary",
+      "baseline_body_language": "Sits upright with occasional cough",
+      "baseline_voice": "Soft, slightly hoarse"
+    },
+    "pc": {
+      "symptom": "Chronic dry cough",
+      "duration": "3 months",
+      "one_liner": "I've been coughing for months and feel constantly tired."
+    },
+    "hpc": {
+      "site": "Chest",
+      "onset": "Insidious over months",
+      "character": "Dry persistent cough with exertional breathlessness",
+      "radiation": "None",
+      "associated": ["Fatigue", "Erythema nodosum", "Blurred vision"],
+      "timing": "All day, worse in evenings",
+      "exacerbating": "Stress, dusty environments",
+      "relieving": "Sips of water",
+      "severity_1_to_10": 4,
+      "relevant_negatives": ["No hemoptysis", "No fever", "No weight loss"]
+    },
+    "pmh": {
+      "conditions": ["Uveitis last year"],
+      "deny": ["Asthma", "COPD"],
+      "surgeries": [],
+      "hospitalisations": [],
+      "trauma": []
+    },
+    "dh": {
+      "current": ["Multivitamin"],
+      "recent_changes": "None",
+      "otc": ["Ibuprofen occasionally"],
+      "herbal": []
+    },
+    "allergies": [],
+    "fh": {"father": "Hypertension", "mother": "Rheumatoid arthritis", "siblings": "Brother healthy"},
+    "sh": {
+      "smoking": "Never",
+      "alcohol": "Rare glass of wine",
+      "recreational_drugs": "None",
+      "living": "Lives with partner",
+      "exercise": "Yoga once weekly but currently too tired",
+      "diet": "Vegetarian",
+      "occupation_detail": "Teaches primary school, high stress recently"
+    },
+    "ros": {
+      "general": ["Fatigue", "No weight loss"],
+      "cardio": ["No chest pain"],
+      "resp": ["Dry cough", "Dyspnea on exertion"],
+      "gi": ["No abdominal pain"],
+      "neuro": ["No weakness"]
+    },
+    "ice": {
+      "ideas": "Wondering if it's allergies or something more serious",
+      "concerns": "Worried about lungs after reading about chronic cough",
+      "expectations": "Wants explanation and relief for symptoms"
+    },
+    "examiner_guidance": {
+      "most_likely_diagnosis": "Pulmonary sarcoidosis",
+      "differentials": ["Post-viral cough", "Asthma", "Interstitial lung disease"],
+      "immediate_investigations": ["Chest X-ray", "Pulmonary function tests", "Serum ACE", "Ophthalmology review"]
+    },
+    "marking": {
+      "sections": [
+        {"id": 1, "title": "Introduction & rapport", "max_marks": 8, "weight": 0.1},
+        {"id": 2, "title": "Presenting complaint & HPC", "max_marks": 24, "weight": 0.35},
+        {"id": 3, "title": "Background history", "max_marks": 18, "weight": 0.25},
+        {"id": 4, "title": "Focused examination", "max_marks": 10, "weight": 0.1},
+        {"id": 5, "title": "Initial investigations & plan", "max_marks": 10, "weight": 0.1},
+        {"id": 6, "title": "Risk assessment & closure", "max_marks": 6, "weight": 0.05},
+        {"id": 7, "title": "Communication skills", "max_marks": 4, "weight": 0.05}
+      ],
+      "total_marks": 80,
+      "pass_mark": 56,
+      "bands": {"Excellent": "70-80", "Good": "60-69", "Borderline": "56-59", "Fail": "<56"}
+    },
+    "disclosure_rules": {
+      "ladder": ["pc_one_line", "hpc_details_if_asked", "background_if_asked"],
+      "never_volunteer_lists": ["associated", "ros"],
+      "deny_vitals": true,
+      "style": {"avg_words_per_turn": [8, 16], "tone": "layperson", "nonverbal_cues": ["Occasional dry cough", "Rubs temples"]}
+    },
+    "rubric_map": {
+      "introduction": ["introduce_self", "confirm_identity", "gain_consent"],
+      "pc": ["nature_of_pain", "duration", "impact_on_function"],
+      "hpc": ["site", "onset", "character", "radiation", "associated", "timing", "exacerbating", "relieving", "severity", "red_flags"],
+      "background": ["pmh", "dh", "allergies", "fh", "sh"],
+      "exam": ["explain_exam", "cardio_exam", "resp_exam", "vitals"],
+      "plan": ["initial_investigations", "initial_management", "risk_discussion"],
+      "ros": ["cardio_screen", "resp_screen", "gi_screen"],
+      "ice": ["ideas", "concerns", "expectations"],
+      "closure": ["summarise", "safety_net", "check_questions"],
+      "communication": ["empathy", "active_listening", "plain_language"]
+    }
+  },
+  {
+    "schemaVersion": "v2",
+    "id": "case_209",
+    "meta": {
+      "title": "Lung Cancer Presenting with Hemoptysis",
+      "station_type": "history_taking",
+      "time_limit_sec": 900,
+      "candidate_brief": "You are in a respiratory rapid access clinic. Take a history from this patient referred with hemoptysis.",
+      "difficulty": "advanced",
+      "specialty": "respiratory",
+      "tags": ["lung cancer", "hemoptysis"],
+      "patient_script": {
+        "opening_statement": "I've started coughing up bits of blood, which really scared me.",
+        "if_asked": {
+          "symptom_details": "It's streaks of blood mixed with phlegm in the mornings.",
+          "timing": "Noticed it three times this week; cough has been there for months.",
+          "after_effects": "Feel anxious and shaky after seeing blood.",
+          "exacerbating": "Early morning coughing fits.",
+          "relieving": "Sipping warm water helps calm cough temporarily.",
+          "associated_symptoms": "Chronic cough, weight loss of 4 kg over 3 months, hoarse voice, mild right shoulder ache, no fever.",
+          "past_medical_history": "Hypertension, COPD diagnosed 2 years ago.",
+          "medications": "Amlodipine, tiotropium inhaler, salbutamol as needed.",
+          "allergies": "None known.",
+          "family_history": "Brother died of lung cancer at 65.",
+          "social_history": "Smoked 30 a day for 40 years, cut down to 10/day. Drinks whiskey socially. Retired shipyard worker exposed to asbestos.",
+          "functional_status": "Gets breathless climbing one flight of stairs, lost appetite."
+        },
+        "collateral": {
+          "observer_note": "Spouse notes increasing fatigue and persistent cough over months."
+        },
+        "emotional_tone": "Anxious and fearful, voice hoarse, coughs intermittently.",
+        "do_not_volunteer": [
+          "Do not state CT findings",
+          "Do not mention biopsy results",
+          "Do not discuss oncology referral"
+        ]
+      }
+    },
+    "patient": {
+      "name": "Robert Hughes",
+      "age": 64,
+      "sex": "Male",
+      "occupation": "Retired shipyard worker",
+      "setting": "Respiratory rapid access clinic",
+      "baseline_mood": "Anxious",
+      "baseline_body_language": "Sits hunched, holds tissue",
+      "baseline_voice": "Hoarse"
+    },
+    "pc": {
+      "symptom": "Hemoptysis",
+      "duration": "1 week of blood in sputum",
+      "one_liner": "I've coughed up blood a few times this week on top of my usual cough."
+    },
+    "hpc": {
+      "site": "Chest",
+      "onset": "Subacute hemoptysis on chronic cough",
+      "character": "Blood-streaked sputum",
+      "radiation": "Right shoulder ache",
+      "associated": ["Weight loss", "Hoarseness", "Breathlessness"],
+      "timing": "Morning predominant",
+      "exacerbating": "Coughing bouts",
+      "relieving": "Warm drinks",
+      "severity_1_to_10": 6,
+      "relevant_negatives": ["No fever", "No hematuria", "No recent travel"]
+    },
+    "pmh": {
+      "conditions": ["Hypertension", "COPD"],
+      "deny": ["Diabetes"],
+      "surgeries": ["Appendicectomy age 20"],
+      "hospitalisations": ["COPD exacerbation admission last winter"],
+      "trauma": []
+    },
+    "dh": {
+      "current": ["Amlodipine 5 mg daily", "Tiotropium inhaler", "Salbutamol inhaler PRN"],
+      "recent_changes": "None",
+      "otc": ["Cough syrup occasionally"],
+      "herbal": []
+    },
+    "allergies": [],
+    "fh": {"father": "Died of myocardial infarction", "mother": "Stroke", "siblings": "Brother lung cancer"},
+    "sh": {
+      "smoking": "40 pack-year history, currently 10/day",
+      "alcohol": "Whiskey 2-3 nights/week",
+      "recreational_drugs": "None",
+      "living": "Lives with spouse",
+      "exercise": "Minimal due to breathlessness",
+      "diet": "Reduced appetite",
+      "occupation_detail": "Exposure to asbestos in shipyard"
+    },
+    "ros": {
+      "general": ["Weight loss", "Fatigue"],
+      "cardio": ["No chest pain"],
+      "resp": ["Chronic cough", "Hemoptysis", "Dyspnea"],
+      "gi": ["No dysphagia"],
+      "neuro": ["No headaches"]
+    },
+    "ice": {
+      "ideas": "Fears it could be cancer like his brother",
+      "concerns": "Worried about leaving wife alone",
+      "expectations": "Wants tests to find the cause quickly"
+    },
+    "examiner_guidance": {
+      "most_likely_diagnosis": "Primary lung malignancy",
+      "differentials": ["Infective bronchitis", "Bronchiectasis", "Pulmonary embolism"],
+      "immediate_investigations": ["Urgent chest CT", "Sputum cytology", "Full blood count", "Pulmonary function tests"]
+    },
+    "marking": {
+      "sections": [
+        {"id": 1, "title": "Introduction & rapport", "max_marks": 8, "weight": 0.1},
+        {"id": 2, "title": "Presenting complaint & HPC", "max_marks": 24, "weight": 0.35},
+        {"id": 3, "title": "Background history", "max_marks": 18, "weight": 0.25},
+        {"id": 4, "title": "Focused examination", "max_marks": 10, "weight": 0.1},
+        {"id": 5, "title": "Initial investigations & plan", "max_marks": 10, "weight": 0.1},
+        {"id": 6, "title": "Risk assessment & closure", "max_marks": 6, "weight": 0.05},
+        {"id": 7, "title": "Communication skills", "max_marks": 4, "weight": 0.05}
+      ],
+      "total_marks": 80,
+      "pass_mark": 56,
+      "bands": {"Excellent": "70-80", "Good": "60-69", "Borderline": "56-59", "Fail": "<56"}
+    },
+    "disclosure_rules": {
+      "ladder": ["pc_one_line", "hpc_details_if_asked", "background_if_asked"],
+      "never_volunteer_lists": ["associated", "ros"],
+      "deny_vitals": true,
+      "style": {"avg_words_per_turn": [6, 14], "tone": "layperson", "nonverbal_cues": ["Frequent cough", "Looks worried"]}
+    },
+    "rubric_map": {
+      "introduction": ["introduce_self", "confirm_identity", "gain_consent"],
+      "pc": ["nature_of_pain", "duration", "impact_on_function"],
+      "hpc": ["site", "onset", "character", "radiation", "associated", "timing", "exacerbating", "relieving", "severity", "red_flags"],
+      "background": ["pmh", "dh", "allergies", "fh", "sh"],
+      "exam": ["explain_exam", "cardio_exam", "resp_exam", "vitals"],
+      "plan": ["initial_investigations", "initial_management", "risk_discussion"],
+      "ros": ["cardio_screen", "resp_screen", "gi_screen"],
+      "ice": ["ideas", "concerns", "expectations"],
+      "closure": ["summarise", "safety_net", "check_questions"],
+      "communication": ["empathy", "active_listening", "plain_language"]
+    }
+  },
+  {
+    "schemaVersion": "v2",
+    "id": "case_210",
+    "meta": {
+      "title": "Hypersensitivity Pneumonitis in a Bird Keeper",
+      "station_type": "history_taking",
+      "time_limit_sec": 900,
+      "candidate_brief": "Take a history from this patient with intermittent breathlessness and cough after exposure to birds.",
+      "difficulty": "advanced",
+      "specialty": "respiratory",
+      "tags": ["hypersensitivity", "environmental"],
+      "patient_script": {
+        "opening_statement": "I get breathless and cough whenever I clean out my bird cages.",
+        "if_asked": {
+          "symptom_details": "It's a dry cough with chest tightness and sometimes chills.",
+          "timing": "Symptoms start a few hours after cleaning, last for a day or two, ongoing for 4 months.",
+          "after_effects": "Feel wiped out the next day.",
+          "exacerbating": "Cleaning aviary, using feather duvets.",
+          "relieving": "Staying away from birds for a few days.",
+          "associated_symptoms": "Occasional fevers, joint aches, no wheeze.",
+          "past_medical_history": "Hay fever, no asthma.",
+          "medications": "Loratadine during spring, no regular meds.",
+          "allergies": "No drug allergies.",
+          "family_history": "Father has asthma, mother healthy.",
+          "social_history": "Non-smoker, owns 12 parrots at home, works as an accountant, no occupational exposures otherwise.",
+          "functional_status": "Can jog normally but avoids it after reactions because of fatigue."
+        },
+        "collateral": {
+          "observer_note": "Partner observes episodes of fever and chills the evening after cleaning aviary."
+        },
+        "emotional_tone": "Concerned yet attached to birds, occasional dry cough.",
+        "do_not_volunteer": [
+          "Do not mention lung function results",
+          "Do not discuss BAL findings",
+          "Do not state treatment recommendations"
+        ]
+      }
+    },
+    "patient": {
+      "name": "Elena Petrov",
+      "age": 45,
+      "sex": "Female",
+      "occupation": "Accountant",
+      "setting": "Respiratory outpatient clinic",
+      "baseline_mood": "Concerned",
+      "baseline_body_language": "Hands clasped, occasional cough",
+      "baseline_voice": "Clear"
+    },
+    "pc": {
+      "symptom": "Intermittent breathlessness",
+      "duration": "4 months",
+      "one_liner": "Every time I clean my birds' cages I end up breathless with a cough."
+    },
+    "hpc": {
+      "site": "Chest",
+      "onset": "Recurrent episodes after exposure",
+      "character": "Dry cough with chest tightness and breathlessness",
+      "radiation": "None",
+      "associated": ["Fever", "Chills", "Joint aches"],
+      "timing": "Starts hours after exposure, settles over 1-2 days",
+      "exacerbating": "Bird exposure, feather products",
+      "relieving": "Avoiding birds",
+      "severity_1_to_10": 5,
+      "relevant_negatives": ["No wheeze", "No hemoptysis", "No weight loss"]
+    },
+    "pmh": {
+      "conditions": ["Hay fever"],
+      "deny": ["Asthma"],
+      "surgeries": [],
+      "hospitalisations": [],
+      "trauma": []
+    },
+    "dh": {
+      "current": ["Loratadine PRN"],
+      "recent_changes": "None",
+      "otc": [],
+      "herbal": []
+    },
+    "allergies": [],
+    "fh": {"father": "Asthma", "mother": "Healthy", "siblings": "Brother healthy"},
+    "sh": {
+      "smoking": "Never",
+      "alcohol": "1-2 glasses wine/week",
+      "recreational_drugs": "None",
+      "living": "Lives with partner and many birds",
+      "exercise": "Jogging twice weekly",
+      "diet": "Balanced",
+      "occupation_detail": "Office-based job"
+    },
+    "ros": {
+      "general": ["Fevers", "Chills", "Fatigue"],
+      "cardio": ["No chest pain"],
+      "resp": ["Dry cough", "Breathlessness"],
+      "gi": ["No nausea"],
+      "neuro": ["No headaches"]
+    },
+    "ice": {
+      "ideas": "Thinks birds might be causing it but doesn't want to give them up",
+      "concerns": "Worried about long-term lung damage",
+      "expectations": "Looking for ways to manage symptoms while keeping birds"
+    },
+    "examiner_guidance": {
+      "most_likely_diagnosis": "Hypersensitivity pneumonitis (bird fancier's lung)",
+      "differentials": ["Allergic asthma", "Viral infections", "Sarcoidosis"],
+      "immediate_investigations": ["Detailed exposure history", "Chest X-ray", "High-resolution CT", "Serum precipitins"]
+    },
+    "marking": {
+      "sections": [
+        {"id": 1, "title": "Introduction & rapport", "max_marks": 8, "weight": 0.1},
+        {"id": 2, "title": "Presenting complaint & HPC", "max_marks": 24, "weight": 0.35},
+        {"id": 3, "title": "Background history", "max_marks": 18, "weight": 0.25},
+        {"id": 4, "title": "Focused examination", "max_marks": 10, "weight": 0.1},
+        {"id": 5, "title": "Initial investigations & plan", "max_marks": 10, "weight": 0.1},
+        {"id": 6, "title": "Risk assessment & closure", "max_marks": 6, "weight": 0.05},
+        {"id": 7, "title": "Communication skills", "max_marks": 4, "weight": 0.05}
+      ],
+      "total_marks": 80,
+      "pass_mark": 56,
+      "bands": {"Excellent": "70-80", "Good": "60-69", "Borderline": "56-59", "Fail": "<56"}
+    },
+    "disclosure_rules": {
+      "ladder": ["pc_one_line", "hpc_details_if_asked", "background_if_asked"],
+      "never_volunteer_lists": ["associated", "ros"],
+      "deny_vitals": true,
+      "style": {"avg_words_per_turn": [7, 15], "tone": "layperson", "nonverbal_cues": ["Clutches hands", "Occasional cough"]}
+    },
+    "rubric_map": {
+      "introduction": ["introduce_self", "confirm_identity", "gain_consent"],
+      "pc": ["nature_of_pain", "duration", "impact_on_function"],
+      "hpc": ["site", "onset", "character", "radiation", "associated", "timing", "exacerbating", "relieving", "severity", "red_flags"],
+      "background": ["pmh", "dh", "allergies", "fh", "sh"],
+      "exam": ["explain_exam", "cardio_exam", "resp_exam", "vitals"],
+      "plan": ["initial_investigations", "initial_management", "risk_discussion"],
+      "ros": ["cardio_screen", "resp_screen", "gi_screen"],
+      "ice": ["ideas", "concerns", "expectations"],
+      "closure": ["summarise", "safety_net", "check_questions"],
+      "communication": ["empathy", "active_listening", "plain_language"]
+    }
+  }
+]
